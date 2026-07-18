@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Portfolio | SimplyWed Studio</title>
+<meta name="description" content="Vancouver wedding, elopement, engagement &amp; proposal photography by SimplyWed Studio — real couples, real moments, from the coast to the Sea-to-Sky."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<style>
+  .page-hero{padding:170px 0 60px}
+  .page-hero .label{margin-bottom:20px;display:block}
+  .page-hero h1{font-size:clamp(2.8rem,6vw,5.4rem)}
+  .page-hero p{color:var(--ink-soft);max-width:50ch;margin-top:20px;font-size:1.08rem}
+  .cat-block{padding-block:clamp(30px,5vw,56px);border-top:1px solid var(--line)}
+  .cat-block .head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:32px;flex-wrap:wrap;gap:10px}
+  .cat-block h2{font-size:clamp(1.9rem,4vw,3rem)}
+  .cat-block .head .label{color:var(--ink-soft)}
+  .gal{columns:3;column-gap:14px}
+  .gal figure{break-inside:avoid;margin:0 0 14px;overflow:hidden}
+  .gal img{width:100%;height:auto;display:block;transition:transform .6s ease}
+  .gal figure:hover img{transform:scale(1.03)}
+  .closer{background:var(--ink);color:#fff;text-align:center;padding-block:clamp(64px,9vw,120px);margin-top:clamp(40px,6vw,80px)}
+  .closer h2{font-size:clamp(2.1rem,4.6vw,3.6rem);color:#fff;margin-bottom:14px}
+  .closer h2 em{font-style:italic;color:var(--aqua)}
+  .closer p{color:#c2c9cb;margin-bottom:28px}
+  @media(max-width:900px){.gal{columns:2}}
+  @media(max-width:560px){.gal{columns:1}}
+</style>
+</head>
+<body>
+<header class="site-header solid edge">
+  <nav class="maxw nav">
+    <a class="brand" href="index.html"><img src="logo-wordmark.png" alt="SimplyWed — Photo &amp; Content Creation"/></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a><a href="about.html">About</a>
+      <a href="services.html">Services</a><a href="portfolio.html" class="active">Portfolio</a>
+      <a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+      <a href="contact.html" class="book">Book a session</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">Menu</button>
+  </nav>
+</header>
+
+<section class="page-hero edge"><div class="maxw">
+  <span class="label">Our work</span>
+  <h1>Real couples, real moments.</h1>
+  <p>From a coastal engagement to a full waterfront wedding — a look at the days we've had the honour of photographing across Vancouver and the Sea-to-Sky.</p>
+</div></section>
+
+<section class="edge"><div class="maxw">
+
+  <div class="cat-block">
+    <div class="head"><h2>Weddings</h2><span class="label">Vancouver · The Wallace</span></div>
+    <div class="gal">
+      <figure class="tall"><img src="images/wed-card.jpg" alt="Vancouver wedding couple, SimplyWed Studio"/></figure>
+      <figure class="wide"><img src="images/wed-hero.jpg" alt="Wedding couple on the pier with Vancouver skyline"/></figure>
+      <figure><img src="images/wed-bw.jpg" alt="Black and white wedding embrace"/></figure>
+      <figure><img src="images/wed-dance.jpg" alt="Wedding first dance"/></figure>
+      <figure class="wide"><img src="images/wed-skyline.jpg" alt="Wedding party with Vancouver skyline"/></figure>
+      <figure class="tall"><img src="images/elope-forest.jpg" alt="Squamish elopement in old-growth forest"/></figure>
+    </div>
+  </div>
+
+  <div class="cat-block">
+    <div class="head"><h2>Elopements</h2><span class="label">Squamish · Sea-to-Sky</span></div>
+    <div class="gal">
+      <figure class="wide"><img src="images/elope-hero.jpg" alt="Squamish elopement, waterfront"/></figure>
+      <figure class="tall"><img src="images/elope-bw.jpg" alt="Black and white elopement embrace"/></figure>
+      <figure><img src="images/elope-candid.jpg" alt="Elopement candid embrace"/></figure>
+      <figure><img src="images/elope-detail.jpg" alt="Elopement florals detail"/></figure>
+      <figure class="wide"><img src="images/elope-epic.jpg" alt="Elopement couple on a rocky point, mountains beyond"/></figure>
+    </div>
+  </div>
+
+  <div class="cat-block">
+    <div class="head"><h2>Engagements</h2><span class="label">Whytecliff · West Vancouver</span></div>
+    <div class="gal">
+      <figure class="tall"><img src="images/eng-card.jpg" alt="Engagement embrace, Whytecliff Park"/></figure>
+      <figure class="wide"><img src="images/eng-sparkler.jpg" alt="Engagement sparkler kiss at sunset"/></figure>
+      <figure><img src="images/eng-bw.jpg" alt="Black and white engagement embrace"/></figure>
+      <figure><img src="images/eng-embrace.jpg" alt="Engagement couple by the shore"/></figure>
+      <figure class="wide"><img src="images/eng-dance.jpg" alt="Engagement couple dancing on the rocks"/></figure>
+    </div>
+  </div>
+
+  <div class="cat-block">
+    <div class="head"><h2>Proposals</h2><span class="label">Golden hour · Fraser Valley</span></div>
+    <div class="gal">
+      <figure class="wide"><img src="images/prop-hero.jpg" alt="Surprise proposal, the moment he kneels"/></figure>
+      <figure class="tall"><img src="images/prop-field.jpg" alt="Proposal couple in a dahlia field"/></figure>
+      <figure><img src="images/prop-ring.jpg" alt="Proposal ring detail"/></figure>
+      <figure><img src="images/prop-bw.jpg" alt="Black and white proposal walk"/></figure>
+      <figure class="wide"><img src="images/prop-card.jpg" alt="Emotional embrace after the proposal"/></figure>
+    </div>
+  </div>
+
+</div></section>
+
+<section class="closer edge"><div class="maxw">
+  <h2>Love what you see? <em>Let's talk.</em></h2>
+  <p>Tell us about your day — we'd love to capture your story.</p>
+  <a class="btn light" href="contact.html">Book a session</a>
+</div></section>
+
+<footer class="site-footer edge"><div class="maxw">
+  <div class="rule"></div>
+  <div class="foot-grid">
+    <div><a class="brand" href="index.html"><img src="logo-wordmark-light.png" alt="SimplyWed Studio"/></a>
+      <p>Wedding &amp; elopement photography in Vancouver, BC. Storytelling fueled by passion.</p></div>
+    <div><h4>Navigate</h4><ul>
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="connect"><h4>Connect</h4><ul>
+      <li><a href="https://www.instagram.com/simplywedstudio" target="_blank" rel="noopener">Instagram — @simplywedstudio</a></li>
+      <li><a href="mailto:dave@sowedding.ca">dave@sowedding.ca</a></li>
+      <li><a href="contact.html">Book a session →</a></li></ul></div>
+  </div>
+  <div class="copyright">© 2026 SimplyWed Studio. All rights reserved. &nbsp;·&nbsp; Vancouver, BC · Canada</div>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Journal | SimplyWed Studio</title>
+<meta name="description" content="The SimplyWed Studio journal — Vancouver elopement &amp; wedding planning guides, locations, timing, and real stories."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<style>
+  .page-hero{padding:170px 0 56px}
+  .page-hero .label{margin-bottom:20px;display:block}
+  .page-hero h1{font-size:clamp(2.8rem,6vw,5.4rem)}
+  .page-hero p{color:var(--ink-soft);max-width:48ch;margin-top:20px;font-size:1.08rem}
+  .posts{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(26px,3vw,44px);padding-bottom:clamp(60px,8vw,110px)}
+  .post{display:flex;flex-direction:column}
+  .post .ph{aspect-ratio:3/2;overflow:hidden;margin-bottom:18px}
+  .post .ph img{transition:transform .6s ease}
+  .post:hover .ph img{transform:scale(1.04)}
+  .post .meta{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--aqua-deep);margin-bottom:10px}
+  .post h2{font-family:'Fraunces';font-weight:400;font-size:1.5rem;line-height:1.16;margin-bottom:10px}
+  .post p{color:var(--ink-soft);font-size:.96rem;margin-bottom:14px}
+  .post .go{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:3px;align-self:flex-start}
+  .post:hover .go{color:var(--aqua-deep);border-color:var(--aqua-deep)}
+  .closer{background:var(--ink);color:#fff;text-align:center;padding-block:clamp(60px,8vw,110px)}
+  .closer h2{font-size:clamp(2rem,4.4vw,3.4rem);color:#fff;margin-bottom:14px}
+  .closer h2 em{font-style:italic;color:var(--aqua)}
+  .closer p{color:#c2c9cb;margin-bottom:26px}
+  @media(max-width:860px){.posts{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.posts{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="site-header solid edge">
+  <nav class="maxw nav">
+    <a class="brand" href="index.html"><img src="logo-wordmark.png" alt="SimplyWed — Photo &amp; Content Creation"/></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a><a href="about.html">About</a>
+      <a href="services.html">Services</a><a href="portfolio.html">Portfolio</a>
+      <a href="blog.html" class="active">Blog</a><a href="contact.html">Contact</a>
+      <a href="contact.html" class="book">Book a session</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">Menu</button>
+  </nav>
+</header>
+
+<section class="page-hero edge"><div class="maxw">
+  <span class="label">The Journal</span>
+  <h1>Planning notes &amp; real stories.</h1>
+  <p>Guides to eloping and marrying in Vancouver — locations, timing, and everything we've learned photographing them.</p>
+</div></section>
+
+<section class="edge"><div class="maxw posts">
+
+  <a class="post" href="blog/how-to-plan-a-vancouver-elopement.html">
+    <div class="ph"><img src="images/pl-veil-wind.jpg" alt="How to plan a Vancouver elopement"/></div>
+    <div class="meta">Elopements · Planning</div>
+    <h2>How to Plan a Vancouver Elopement</h2>
+    <p>The licence, the locations, the timing — everything you actually need, in the order you need it.</p>
+    <span class="go">Read →</span>
+  </a>
+
+  <a class="post" href="blog/the-best-elopement-locations-in-vancouver.html">
+    <div class="ph"><img src="images/loc-whytecliff-wide.jpg" alt="Best elopement locations in Vancouver"/></div>
+    <div class="meta">Elopements · Locations</div>
+    <h2>The Best Elopement Locations in Vancouver</h2>
+    <p>From old-growth forest to coastline to mountain peaks — where to say your vows.</p>
+    <span class="go">Read →</span>
+  </a>
+
+  <a class="post" href="blog/why-couples-are-choosing-elopements.html">
+    <div class="ph"><img src="images/wy-embrace-rocks.jpg" alt="Why couples are choosing elopements"/></div>
+    <div class="meta">Elopements</div>
+    <h2>Why Couples Are Choosing Elopements</h2>
+    <p>Less stress, more meaning — the case for a day built entirely around the two of you.</p>
+    <span class="go">Read →</span>
+  </a>
+
+  <a class="post" href="blog/best-time-of-year-to-get-married-in-vancouver.html">
+    <div class="ph"><img src="images/sn-mountain-epic.jpg" alt="Best time of year to get married in Vancouver"/></div>
+    <div class="meta">Weddings · Planning</div>
+    <h2>The Best Time of Year to Get Married in Vancouver</h2>
+    <p>Season by season — cherry blossoms, golden summers, moody autumns — and how to plan around the light.</p>
+    <span class="go">Read →</span>
+  </a>
+
+  <a class="post" href="blog/best-vancouver-venues-for-intimate-weddings.html">
+    <div class="ph"><img src="images/vn-wallace-skyline-embrace.jpg" alt="Best Vancouver venues for intimate weddings"/></div>
+    <div class="meta">Weddings · Venues</div>
+    <h2>Best Vancouver Venues for Intimate Weddings</h2>
+    <p>Six stunning spots made for micro weddings and ceremonies of twenty or fewer.</p>
+    <span class="go">Read →</span>
+  </a>
+
+  <a class="post" href="blog/fairmont-hotel-vancouver-wedding.html">
+    <div class="ph"><img src="images/fm-staircase-descent.jpg" alt="Fairmont Hotel Vancouver wedding — SimplyWed Studio"/></div>
+    <div class="meta">Weddings · Fairmont</div>
+    <h2>A Luxury Wedding at the Fairmont Hotel Vancouver</h2>
+    <p>Gilded ballrooms, cascading orchids, and black-tie elegance — Jayleen &amp; Ryan's Fairmont wedding day.</p>
+    <span class="go">Read →</span>
+  </a>
+
+</div></section>
+
+<section class="closer edge"><div class="maxw">
+  <h2>Planning your day? <em>Let's talk.</em></h2>
+  <p>We'd love to hear what you're dreaming up.</p>
+  <a class="btn light" href="contact.html">Get in touch</a>
+</div></section>
+
+<footer class="site-footer edge"><div class="maxw">
+  <div class="rule"></div>
+  <div class="foot-grid">
+    <div><a class="brand" href="index.html"><img src="logo-wordmark-light.png" alt="SimplyWed Studio"/></a>
+      <p>Wedding &amp; elopement photography in Vancouver, BC. Storytelling fueled by passion.</p></div>
+    <div><h4>Navigate</h4><ul>
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="connect"><h4>Connect</h4><ul>
+      <li><a href="https://www.instagram.com/simplywedstudio" target="_blank" rel="noopener">Instagram — @simplywedstudio</a></li>
+      <li><a href="mailto:dave@sowedding.ca">dave@sowedding.ca</a></li>
+      <li><a href="contact.html">Book a session →</a></li></ul></div>
+  </div>
+  <div class="copyright">© 2026 SimplyWed Studio. All rights reserved. &nbsp;·&nbsp; Vancouver, BC · Canada</div>
+</div></footer>
+</body>
+</html>

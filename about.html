@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About | SimplyWed Studio</title>
+<meta name="description" content="SimplyWed Studio — storytelling wedding &amp; elopement photography in Vancouver, BC. Candid over choreographed, light over flash, story over snapshots."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<style>
+  .page-hero{padding:170px 0 0}
+  .page-hero .label{margin-bottom:20px;display:block}
+  .page-hero h1{font-size:clamp(2.8rem,6vw,5.4rem);max-width:14ch}
+  .page-hero h1 em{font-style:italic}
+  .story{padding-block:clamp(60px,8vw,110px)}
+  .story .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(28px,5vw,64px);align-items:center}
+  .story .ph{grid-column:1/6;aspect-ratio:4/5;overflow:hidden}
+  .story .tx{grid-column:7/13}
+  .story .tx p{color:var(--ink-soft);max-width:54ch;margin-bottom:16px;font-size:1.05rem}
+  .story .tx p.big{font-family:'Fraunces';font-style:italic;font-size:clamp(1.4rem,2.6vw,2rem);color:var(--ink);line-height:1.25;margin-bottom:26px}
+  .beliefs{background:var(--white);border-block:1px solid var(--line);padding-block:clamp(60px,8vw,110px)}
+  .beliefs .head{margin-bottom:52px}
+  .beliefs .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px}
+  .belief .n{font-family:'Fraunces';font-style:italic;font-size:1.4rem;color:var(--aqua-deep);display:block;margin-bottom:14px}
+  .belief h3{font-size:1.7rem;margin-bottom:10px;font-weight:400}
+  .belief p{color:var(--ink-soft)}
+  .cta-band{padding-block:clamp(64px,9vw,120px);text-align:center}
+  .cta-band h2{font-size:clamp(2rem,4.4vw,3.4rem);margin-bottom:12px}
+  .cta-band h2 em{font-style:italic;color:var(--aqua-deep)}
+  .cta-band p{color:var(--ink-soft);margin-bottom:28px}
+  .team{padding-block:clamp(50px,7vw,90px);border-top:1px solid var(--line)}
+  .team .label{display:block;margin-bottom:14px}
+  .team h2{font-size:clamp(1.9rem,4vw,3rem);margin-bottom:44px}
+  .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px)}
+  .member .ph{aspect-ratio:4/5;overflow:hidden;margin-bottom:20px}
+  .member h3{font-size:1.7rem;font-weight:400;margin-bottom:4px}
+  .member .role{font-family:'Jost';font-weight:500;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--aqua-deep);margin-bottom:12px}
+  .member p{color:var(--ink-soft);max-width:44ch}
+  @media(max-width:860px){
+    .story .ph{grid-column:1/13;max-width:440px}.story .tx{grid-column:1/13}
+    .beliefs .grid{grid-template-columns:1fr;gap:32px}
+    .team-grid{grid-template-columns:1fr;gap:36px}.member .ph{max-width:400px}
+  }
+</style>
+</head>
+<body>
+<header class="site-header solid edge">
+  <nav class="maxw nav">
+    <a class="brand" href="index.html"><img src="logo-wordmark.png" alt="SimplyWed — Photo &amp; Content Creation"/></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a><a href="about.html" class="active">About</a>
+      <a href="services.html">Services</a><a href="portfolio.html">Portfolio</a>
+      <a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+      <a href="contact.html" class="book">Book a session</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">Menu</button>
+  </nav>
+</header>
+
+<section class="page-hero edge"><div class="maxw">
+  <span class="label">The Story</span>
+  <h1>Every couple deserves photos that feel as <em>real</em> as the moment itself.</h1>
+</div></section>
+
+<section class="story edge"><div class="maxw grid">
+  <div class="ph"><img src="images/elope-candid.jpg" alt="SimplyWed Studio — candid Vancouver wedding photography"/></div>
+  <div class="tx">
+    <p class="big">SimplyWed Studio was built on a simple belief: wedding photography should capture who you actually are — not a posed, perfected version of your day.</p>
+    <p>Based in Vancouver, BC, we specialize in weddings and elopements that range from intimate ceremonies on mountain peaks to full receptions at the city's most beautiful venues. Whatever form your love story takes, our job is to document it honestly and beautifully.</p>
+    <p>We bring a calm, unobtrusive presence to every event — the kind where you forget the camera is there. The result is a collection of images that feel lived-in and true, not staged.</p>
+    <p style="color:var(--ink);font-family:'Fraunces';font-style:italic;font-size:1.2rem;margin-top:8px">This is storytelling photography, fueled by passion.</p>
+  </div>
+</div></section>
+
+<section class="team edge"><div class="maxw">
+  <span class="label">Meet the team</span>
+  <h2>The people behind the camera</h2>
+  <div class="team-grid">
+    <div class="member">
+      <div class="ph"><img src="images/dave.jpg" alt="Dave — SimplyWed Studio wedding photographer, Vancouver"/></div>
+      <h3>Dave</h3>
+      <div class="role">Photographer &amp; Founder</div>
+      <p>[Short bio — Dave to add.]</p>
+    </div>
+    <div class="member">
+      <div class="ph"><img src="images/nick.jpg" alt="Nick — SimplyWed Studio wedding photographer, Vancouver"/></div>
+      <h3>Nick</h3>
+      <div class="role">Photographer</div>
+      <p>[Short bio — Nick to add.]</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="beliefs edge"><div class="maxw">
+  <div class="head"><span class="label">What we believe</span></div>
+  <div class="grid">
+    <div class="belief"><span class="n">01</span><h3>Candid over choreographed.</h3><p>The best photos happen when people stop performing. We create the conditions for real moments to unfold.</p></div>
+    <div class="belief"><span class="n">02</span><h3>Light over flash.</h3><p>We work with available light whenever possible. It keeps things natural, beautiful, and true to how your day actually looked and felt.</p></div>
+    <div class="belief"><span class="n">03</span><h3>Story over snapshots.</h3><p>We're not collecting images — we're telling your story. Every photo connects to the next, building a narrative from start to finish.</p></div>
+  </div>
+</div></section>
+
+<section class="cta-band edge"><div class="maxw">
+  <h2>Let's make something <em>beautiful.</em></h2>
+  <p>We'd love to hear about your plans.</p>
+  <a class="btn" href="contact.html">Get in touch</a>
+</div></section>
+
+<footer class="site-footer edge"><div class="maxw">
+  <div class="rule"></div>
+  <div class="foot-grid">
+    <div><a class="brand" href="index.html"><img src="logo-wordmark-light.png" alt="SimplyWed Studio"/></a>
+      <p>Wedding &amp; elopement photography in Vancouver, BC. Storytelling fueled by passion.</p></div>
+    <div><h4>Navigate</h4><ul>
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="connect"><h4>Connect</h4><ul>
+      <li><a href="https://www.instagram.com/simplywedstudio" target="_blank" rel="noopener">Instagram — @simplywedstudio</a></li>
+      <li><a href="mailto:dave@sowedding.ca">dave@sowedding.ca</a></li>
+      <li><a href="contact.html">Book a session →</a></li></ul></div>
+  </div>
+  <div class="copyright">© 2026 SimplyWed Studio. All rights reserved. &nbsp;·&nbsp; Vancouver, BC · Canada</div>
+</div></footer>
+</body>
+</html>

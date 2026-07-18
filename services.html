@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Services &amp; Pricing | SimplyWed Studio</title>
+<meta name="description" content="SimplyWed Studio packages — photography, videography &amp; social content for Vancouver weddings and elopements. Moments from $400; full-day coverage from $1,750."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<style>
+  .page-hero{padding:170px 0 0}
+  .page-hero .label{margin-bottom:20px;display:block}
+  .page-hero h1{font-size:clamp(2.8rem,6vw,5.4rem)}
+  .page-hero p{color:var(--ink-soft);max-width:52ch;margin-top:22px;font-size:1.1rem}
+  .pkgs{padding-block:clamp(50px,7vw,90px)}
+  .pkg{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(24px,5vw,60px);padding:clamp(30px,4vw,48px) 0;border-top:1px solid var(--line);align-items:start}
+  .pkg:last-child{border-bottom:1px solid var(--line)}
+  .pkg .cat{font-family:'Jost';font-weight:500;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--aqua-deep);margin-bottom:10px}
+  .pkg h2{font-size:clamp(2rem,3.4vw,2.9rem);margin-bottom:12px}
+  .pkg .tag{color:var(--ink-soft);max-width:34ch}
+  .pkg .price{display:flex;flex-wrap:wrap;gap:10px 24px;margin-bottom:20px}
+  .pkg .price span{font-family:'Fraunces';font-size:1.35rem}
+  .pkg .price .from{font-size:2.4rem}
+  .pkg ul{list-style:none;columns:2;column-gap:40px}
+  .pkg li{padding:7px 0;font-size:.98rem;color:var(--ink-soft);break-inside:avoid;border-top:1px solid var(--line)}
+  .pkg li:first-child{border-top:0}
+  .badge{display:inline-block;font-family:'Jost';font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;background:var(--aqua);color:var(--ink);padding:4px 10px;margin-left:10px;vertical-align:middle}
+  .fine{padding-block:clamp(30px,4vw,50px);color:var(--ink-soft);max-width:70ch;font-size:.98rem}
+  .cta-band{background:var(--ink);color:#fff;text-align:center;padding-block:clamp(64px,9vw,120px)}
+  .cta-band h2{font-size:clamp(2.1rem,4.6vw,3.6rem);color:#fff;margin-bottom:12px}
+  .cta-band h2 em{font-style:italic;color:var(--aqua)}
+  .cta-band p{color:#c2c9cb;margin-bottom:28px}
+  @media(max-width:760px){.pkg{grid-template-columns:1fr}.pkg ul{columns:1}}
+</style>
+</head>
+<body>
+<header class="site-header solid edge">
+  <nav class="maxw nav">
+    <a class="brand" href="index.html"><img src="logo-wordmark.png" alt="SimplyWed — Photo &amp; Content Creation"/></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a><a href="about.html">About</a>
+      <a href="services.html" class="active">Services</a><a href="portfolio.html">Portfolio</a>
+      <a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+      <a href="contact.html" class="book">Book a session</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">Menu</button>
+  </nav>
+</header>
+
+<section class="page-hero edge"><div class="maxw">
+  <span class="label">Services &amp; Pricing</span>
+  <h1>Our approach</h1>
+  <p>Whether you're eloping at sunrise or celebrating with everyone you love, we'll be there — calm, present, and ready to capture every real moment.</p>
+</div></section>
+
+<section class="pkgs edge"><div class="maxw">
+  <div class="pkg">
+    <div><div class="cat">Photography</div><h2>Moments</h2><p class="tag">Perfect for proposals, intimate elopements, and small gatherings where you want beautiful photos without a full-day commitment.</p></div>
+    <div><div class="price"><span class="from">$400</span></div>
+      <ul><li>Up to 1 hour coverage</li><li>Hundreds of fully edited, high-resolution images</li><li>Online private gallery with download access</li><li>Metro Vancouver coverage</li></ul></div>
+  </div>
+  <div class="pkg">
+    <div><div class="cat">Photography</div><h2>Memories <span class="badge">Most popular</span></h2><p class="tag">Covers everything from getting ready through to the first dance — the full story of your wedding day, captured as it unfolds.</p></div>
+    <div><div class="price"><span>5 hrs — $1,750</span><span>8 hrs — $2,800</span><span>10 hrs — $3,500</span></div>
+      <ul><li>Full wedding day photography coverage</li><li>Hundreds of fully edited hi-res images</li><li>Private gallery, unlimited downloads</li><li>Additional hours at $350/hr</li></ul></div>
+  </div>
+  <div class="pkg">
+    <div><div class="cat">Videography</div><h2>Cinematic</h2><p class="tag">A film that captures not just how your wedding looked, but how it felt — for the couples who want to relive their day, not just see it.</p></div>
+    <div><div class="price"><span>5 hrs — $1,750</span><span>8 hrs — $2,800</span><span>10 hrs — $3,500</span></div>
+      <ul><li>Cinematic wedding film</li><li>Full ceremony &amp; reception coverage</li><li>Highlight reel for sharing</li><li>Professional audio capture</li><li>Additional hours at $350/hr</li></ul></div>
+  </div>
+  <div class="pkg">
+    <div><div class="cat">Content Creation</div><h2>Social Media</h2><p class="tag">For the couple who wants to share their day in real time — we capture, edit, and deliver content ready to post before the night is over.</p></div>
+    <div><div class="price"><span>5 hrs — $1,000</span><span>8 hrs — $1,500</span><span>10 hrs — $1,800</span></div>
+      <ul><li>Platform-ready photos &amp; short-form video</li><li>Optimized for Instagram, TikTok &amp; Reels</li><li>Fast turnaround for day-of posting</li><li>Additional hours at $250/hr</li></ul></div>
+  </div>
+  <p class="fine">All packages include a pre-wedding consultation, fully edited images delivered via private online gallery, and print release. Custom packages available — reach out and we'll build something that fits.</p>
+</div></section>
+
+<section class="cta-band edge"><div class="maxw">
+  <h2>Let's talk about <em>your day.</em></h2>
+  <p>Questions about packages? We're happy to help you figure out what fits.</p>
+  <a class="btn light" href="contact.html">Get in touch</a>
+</div></section>
+
+<footer class="site-footer edge"><div class="maxw">
+  <div class="rule"></div>
+  <div class="foot-grid">
+    <div><a class="brand" href="index.html"><img src="logo-wordmark-light.png" alt="SimplyWed Studio"/></a>
+      <p>Wedding &amp; elopement photography in Vancouver, BC. Storytelling fueled by passion.</p></div>
+    <div><h4>Navigate</h4><ul>
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="connect"><h4>Connect</h4><ul>
+      <li><a href="https://www.instagram.com/simplywedstudio" target="_blank" rel="noopener">Instagram — @simplywedstudio</a></li>
+      <li><a href="mailto:dave@sowedding.ca">dave@sowedding.ca</a></li>
+      <li><a href="contact.html">Book a session →</a></li></ul></div>
+  </div>
+  <div class="copyright">© 2026 SimplyWed Studio. All rights reserved. &nbsp;·&nbsp; Vancouver, BC · Canada</div>
+</div></footer>
+</body>
+</html>
