@@ -1,0 +1,471 @@
+<title>Piano Return</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Instrument+Serif&display=swap">
+<style>
+/* Layout: summary tiles, a keyboard-style week strip, then repertoire list beside the roadmap and harmony checklists. */
+:root{
+  --bg:#EEF1F4; --surface:#FFFFFF; --ink:#18202B; --muted:#5B6676; --line:#D5DBE3;
+  --accent:#2C5F7F; --accent-ink:#FFFFFF; --accent-soft:#DCE9F1;
+  --good:#2E7D5B; --warn:#A8690F; --crit:#B23A48; --key:#F7F8FA; --key-edge:#B9C2CE;
+  --display:'Instrument Serif',Georgia,serif; --body:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12171E; --surface:#1A212B; --ink:#E8ECF1; --muted:#9AA6B5; --line:#2B3441;
+  --accent:#6FB0D6; --accent-ink:#0F1A22; --accent-soft:#1E3444;
+  --good:#5CC08F; --warn:#E0B057; --crit:#E07A87; --key:#222B37; --key-edge:#3A4757; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#12171E; --surface:#1A212B; --ink:#E8ECF1; --muted:#9AA6B5; --line:#2B3441;
+  --accent:#6FB0D6; --accent-ink:#0F1A22; --accent-soft:#1E3444;
+  --good:#5CC08F; --warn:#E0B057; --crit:#E07A87; --key:#222B37; --key-edge:#3A4757; color-scheme:dark;}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 48px}
+.wrap{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(34px,6vw,52px);line-height:1.05;margin:0;text-wrap:balance}
+h2{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;font-weight:600}
+h3{margin:0;font-size:15px;font-weight:600}
+p{margin:0}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px}
+header .sub{color:var(--muted);margin-top:6px;max-width:60ch}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;min-width:0}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;min-width:0}
+.tile .lab{font-size:12px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;font-weight:600}
+.tile .val{font-family:var(--display);font-size:38px;line-height:1.1;margin-top:4px;font-variant-numeric:tabular-nums}
+.tile .val small{font-family:var(--body);font-size:14px;color:var(--muted);margin-left:4px}
+.bar{height:6px;border-radius:3px;background:var(--line);margin-top:8px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:3px}
+.two{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:820px){.two{grid-template-columns:minmax(0,1fr)}}
+.keys{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;height:130px}
+.key{position:relative;background:var(--key);border:1px solid var(--key-edge);border-radius:2px 2px 6px 6px;overflow:hidden;display:flex;align-items:flex-end;justify-content:center}
+.key .fill{position:absolute;left:0;right:0;bottom:0;background:var(--accent);opacity:.85}
+.key.today{outline:2px solid var(--accent);outline-offset:2px}
+.key span{position:relative;font-size:11px;font-weight:600;padding-bottom:6px;color:var(--ink);mix-blend-mode:normal;text-shadow:0 0 3px var(--key)}
+.keynums{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-top:6px;font-size:12px;color:var(--muted);text-align:center;font-variant-numeric:tabular-nums}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button,select,input,textarea{font:inherit;color:var(--ink)}
+button{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:7px 12px;cursor:pointer;font-weight:500}
+button:hover{border-color:var(--accent)}
+button.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible,.chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+select,input,textarea{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:7px 10px;min-width:0}
+input[type=number]{width:84px}
+textarea{width:100%;resize:vertical;min-height:56px}
+label.f{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 12px;font-size:13px;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.piece{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;padding:10px 0;border-top:1px solid var(--line);align-items:center}
+.piece:first-child{border-top:0}
+.piece .t{font-weight:600}
+.piece .m{color:var(--muted);font-size:13px}
+.pill{display:inline-block;font-size:11px;font-weight:600;border-radius:999px;padding:1px 8px;border:1px solid currentColor;margin-left:6px;vertical-align:1px}
+.s-queue{color:var(--muted)}.s-learning{color:var(--warn)}.s-polishing{color:var(--accent)}.s-playable{color:var(--good)}
+.week{border-top:1px solid var(--line);padding:10px 0}
+.week:first-child{border-top:0}
+.week.now{background:var(--accent-soft);margin:0 -10px;padding:10px;border-radius:8px;border-top-color:transparent}
+.week h3 small{font-weight:500;color:var(--muted);margin-left:6px}
+.task{display:flex;gap:8px;align-items:flex-start;margin-top:6px;font-size:14px}
+.task input{margin-top:3px;flex:none}
+.note{font-size:13px;color:var(--muted)}
+.warnbox{border:1px solid var(--crit);color:var(--crit);border-radius:8px;padding:10px 12px;margin-top:10px;font-weight:500}
+.routine{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px}
+.routine b{font-variant-numeric:tabular-nums;color:var(--accent)}
+.ci{border-top:1px solid var(--line);padding:8px 0;font-size:14px}
+.status-line{font-size:12px;color:var(--muted)}
+.empty{color:var(--muted);font-size:14px}
+@media (prefers-reduced-motion:no-preference){.bar i,.key .fill{transition:all .3s}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Piano Return</h1>
+      <p class="sub">30 minutes a day. Chopin nocturnes, the Pathétique, a little Zimmer and Ghibli. Nothing that hurts.</p>
+    </div>
+    <div class="status-line" id="saveStatus" aria-live="polite">Loading...</div>
+  </header>
+
+  <section class="tiles" id="tiles" aria-label="Summary"></section>
+
+  <section class="two">
+    <div class="card">
+      <h2>This week</h2>
+      <div class="keys" id="keys"></div>
+      <div class="keynums" id="keynums"></div>
+      <div class="row" style="margin-top:14px">
+        <button class="primary" id="done30">Log 30 min today</button>
+        <label class="f" style="flex-direction:row;align-items:center;gap:8px">
+          <span>Minutes</span><input type="number" id="minInput" min="0" max="300" step="5" value="30">
+        </label>
+        <button id="saveMin">Set today</button>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Daily 30 minutes</h2>
+      <div class="routine">
+        <b>0–5</b><span>Warm-up: slow five-finger patterns, then one scale and arpeggio</span>
+        <b>5–10</b><span>A piece you already know, to settle in</span>
+        <b>10–25</b><span>Main piece: hard spots looped slowly, then one slow pass</span>
+        <b>25–30</b><span>Play for pleasure. No fixing.</span>
+      </div>
+      <p class="note" style="margin-top:10px">Twice a week, swap the last 5 minutes for the harmony task.</p>
+    </div>
+  </section>
+
+  <section class="two">
+    <div class="card">
+      <h2>Running list to play</h2>
+      <div class="chips" id="trackChips" role="group" aria-label="Filter by collection"></div>
+      <div class="chips" id="statusChips" role="group" aria-label="Filter by status"></div>
+      <div id="pieces"></div>
+      <form id="addForm" class="row" style="margin-top:14px;border-top:1px solid var(--line);padding-top:14px">
+        <label class="f" style="flex:1 1 140px">Add your own<input id="addTitle" placeholder="Title" required></label>
+        <label class="f" style="flex:1 1 120px">Composer<input id="addComposer" placeholder="Composer"></label>
+        <label class="f">Collection<select id="addTrack"></select></label>
+        <button class="primary" type="submit" style="align-self:flex-end">Add</button>
+      </form>
+      <p class="note" style="margin-top:8px">Level is an approximate Royal Conservatory (RCM) equivalent, from memory. Check your edition.</p>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:20px;min-width:0">
+      <div class="card">
+        <h2>Weekly check-in</h2>
+        <div class="row">
+          <label class="f">Tension or pain
+            <select id="ciTension">
+              <option value="0">None</option><option value="1">Slight</option><option value="2">Some</option>
+              <option value="3">Noticeable</option><option value="4">Pain</option>
+            </select>
+          </label>
+          <label class="f">Mood after playing
+            <select id="ciMood"><option>Calmer</option><option>Same</option><option>More tired</option></select>
+          </label>
+        </div>
+        <label class="f" style="margin-top:10px">One win this week<textarea id="ciNote"></textarea></label>
+        <div class="row" style="margin-top:10px"><button class="primary" id="ciSave">Save check-in</button></div>
+        <div id="ciWarn"></div>
+        <div id="ciList" style="margin-top:10px"></div>
+      </div>
+
+      <div class="card">
+        <h2>12-week roadmap</h2>
+        <div class="row" style="margin-bottom:8px">
+          <label class="f" style="flex-direction:row;align-items:center;gap:8px"><span>Start date</span><input type="date" id="startDate"></label>
+        </div>
+        <div id="roadmap"></div>
+      </div>
+
+      <div class="card">
+        <h2>Harmony, 10 min twice a week</h2>
+        <div id="harmony"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+(function(){
+var TRACKS=[
+ ['warm','Easing in'],['core','Chopin & Beethoven'],['zimmer','Hans Zimmer'],['ghibli','Ghibli'],['more','Other modern'],['mine','Mine']];
+var STATUS=[['queue','Want to learn'],['learning','Learning'],['polishing','Polishing'],['playable','Can play']];
+var P=[
+ // Easing in
+ ['w1','warm','Chopin','Prelude in E minor, Op. 28 No. 4','7–8','Weeks 1–2. A slow descending bass; a good lesson in chords.'],
+ ['w2','warm','Chopin','Prelude in B minor, Op. 28 No. 6','7','Weeks 1–2. Slow and singing.'],
+ ['w3','warm','Chopin','Waltz in A minor, B.150','7–8','Weeks 1–2.'],
+ ['w4','warm','Satie','Gymnopédie No. 1','5–6','Weeks 1–2. Relaxing and forgiving.'],
+ // Core
+ ['c1','core','Chopin','Nocturne in E-flat, Op. 9 No. 2','9','Weeks 3–6. Left hand first.'],
+ ['c2','core','Beethoven','Pathétique Sonata, 2nd mvt (Adagio cantabile)','8–9','Weeks 3–6. Keep inner triplets soft.'],
+ ['c3','core','Chopin','Nocturne in E minor, Op. 72 No. 1','8','Weeks 7–12.'],
+ ['c4','core','Chopin','Nocturne in C-sharp minor (posthumous)','9–10','Weeks 7–12. Alternative to Op. 72.'],
+ ['c5','core','Beethoven','Pathétique Sonata, 3rd mvt (Rondo)','9','Weeks 7–12. Start at a moderate tempo.'],
+ ['c6','core','Beethoven','Pathétique Sonata, 1st mvt','10','Last. Loose wrist for the tremolo octaves; stop if tired.'],
+ ['c7','core','Chopin','Nocturne in D-flat, Op. 27 No. 2','10','Later goal.'],
+ ['c8','core','Chopin','Nocturne in B-flat minor, Op. 9 No. 1','9–10','Later goal.'],
+ ['c9','core','Chopin','Nocturne in F minor, Op. 55 No. 1','10','Later goal.'],
+ // Zimmer
+ ['z1','zimmer','Hans Zimmer','Time (Inception)','6–8','Slow build; great for destressing.'],
+ ['z2','zimmer','Hans Zimmer','Cornfield Chase (Interstellar)','7–8','Repeating figures; steady left hand.'],
+ ['z3','zimmer','Hans Zimmer','Day One (Interstellar)','6–7','Gentle, spacious.'],
+ ['z4','zimmer','Hans Zimmer','Now We Are Free (Gladiator)','6–8','Lyrical melody.'],
+ ['z5','zimmer','Hans Zimmer','He’s a Pirate (Pirates of the Caribbean)','7–9','Fun and rhythmic. Klaus Badelt co-wrote the score.'],
+ ['z6','zimmer','Hans Zimmer','Can You Feel the Love Tonight (The Lion King)','5–7','Elton John song from a Zimmer-scored film; play as a ballad.'],
+ ['z7','zimmer','Hans Zimmer','Paul’s Dream (Dune)','6–8','Atmospheric.'],
+ // Ghibli
+ ['g1','ghibli','Joe Hisaishi','Summer (Kikujiro)','7–8','A favourite for pianists.'],
+ ['g2','ghibli','Joe Hisaishi','One Summer’s Day (Spirited Away)','6–7','Easy and charming.'],
+ ['g3','ghibli','Joe Hisaishi','Merry-Go-Round of Life (Howl’s Moving Castle)','7–9','Waltz feel.'],
+ ['g4','ghibli','Joe Hisaishi','Path of the Wind (My Neighbor Totoro)','5–6','Start here.'],
+ ['g5','ghibli','Joe Hisaishi','A Town with an Ocean View (Kiki’s Delivery Service)','6–7','Bright and light.'],
+ ['g6','ghibli','Joe Hisaishi','Carrying You (Castle in the Sky)','5–7','Tender.'],
+ ['g7','ghibli','Kazumi Itsuwa','Always With Me (Spirited Away)','4–5','Very gentle; good evening wind-down.'],
+ // More modern
+ ['m1','more','Ludovico Einaudi','Nuvole Bianche','6–7','Flowing left hand, like a nocturne pattern.'],
+ ['m2','more','Yiruma','River Flows in You','5–6','Easy win.'],
+ ['m3','more','Vince Guaraldi','Cast Your Fate to the Wind','6–7','Lead-sheet jazz.']
+];
+var DEFAULT_STATUS={w4:'queue'};
+var ROAD=[
+ ['Wake up the hands',['Play Op. 28 No. 4 and No. 6 slowly','Scale + arpeggio of the day, hands separate','Label chords in Prelude in E minor']],
+ ['Settle in',['Waltz in A minor, left hand alone','Gymnopédie No. 1 from memory (optional)','Short stretch breaks every 10 min']],
+ ['Begin Op. 9 No. 2',['Left-hand pattern, hands separate','Learn the first 8 bars hands together','Find I, IV, V chords']],
+ ['Begin Pathétique Adagio',['Read the melody and inner triplets','Sing the melody, then play it','Play first section slowly with pedal']],
+ ['Shape both pieces',['Op. 9 No. 2 pages 1–2 at slow tempo','Adagio middle section triplets alone','Record yourself once']],
+ ['First pieces playable',['Op. 9 No. 2 straight through','Adagio straight through','Pick a Ghibli or Zimmer piece for fun']],
+ ['Second nocturne',['Start Op. 72 No. 1 or C-sharp minor','Keep Op. 9 No. 2 alive (once a week)','Begin Pathétique Rondo, right hand']],
+ ['Rondo and nocturne',['Rondo hands together, slow','Nocturne first section','Spot the modulation in the Adagio']],
+ ['Consolidate',['Rondo at moderate tempo','Nocturne first two sections','One modern piece polished']],
+ ['Pathétique 1st mvt: Grave',['Play the slow Grave introduction','Tremolo octaves: wrist drills, 2 min max','Stop at any tension']],
+ ['Pathétique 1st mvt: Allegro',['Right-hand theme slowly','Left-hand tremolo, small sections','Record yourself once']],
+ ['Play it through',['Play a mini-recital of 3 pieces for yourself or a friend','Choose your next nocturne','Review your check-ins']]
+];
+var HARM=[
+ 'Label the chords in Prelude in E minor (Op. 28 No. 4)',
+ 'Find I, IV, V and V7 in Nocturne Op. 9 No. 2',
+ 'Find the pivot to the middle section in the Pathétique Adagio',
+ 'Play ii7–V7–I in 3 keys',
+ 'Spot the secondary dominants in a Chopin nocturne',
+ 'Find the diminished seventh chords in the Pathétique',
+ 'Play the I–V–vi–IV pattern in 4 keys (Zimmer and pop)',
+ 'Find the Neapolitan chord in the Pathétique',
+ 'Hear modal mixture (borrowed chords) in Ghibli pieces',
+ 'Play a 12-bar blues in 2 keys',
+ 'Improvise a left-hand nocturne pattern with your own melody',
+ 'Label the chords in one complete piece you play'
+];
+
+var S={s:{},log:{},t:{},custom:[],ci:[],start:''};
+var dirty=false,writing=false,again=false,timer=null,db=null,ref=null,uid=null;
+var fTrack='all',fStatus='all';
+var KEY='piano-return-v1';
+
+function $(id){return document.getElementById(id)}
+function esc(x){return String(x).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function ds(d){var y=d.getFullYear(),m=('0'+(d.getMonth()+1)).slice(-2),dd=('0'+d.getDate()).slice(-2);return y+'-'+m+'-'+dd}
+function today(){return ds(new Date())}
+function norm(o){
+  o=o||{};
+  return {s:o.s||{},log:o.log||{},t:o.t||{},custom:o.custom||[],ci:o.ci||[],start:o.start||''};
+}
+function setStatusLine(t){$('saveStatus').textContent=t}
+
+// storage
+function lsGet(){try{var r=localStorage.getItem(KEY);return r?JSON.parse(r):null}catch(e){return null}}
+function lsSet(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function save(){
+  dirty=true;lsSet();
+  if(!ref){setStatusLine('Saved in this browser');return}
+  setStatusLine('Saving...');
+  clearTimeout(timer);
+  timer=setTimeout(flush,600);
+}
+function flush(){
+  if(writing){again=true;return}
+  writing=true;
+  var body=JSON.parse(JSON.stringify(S));
+  ref.set(body).then(function(){
+    writing=false;
+    if(again){again=false;flush();return}
+    dirty=false;setStatusLine('Saved');
+  }).catch(function(){
+    writing=false;dirty=false;setStatusLine('Saved in this browser only');
+  });
+}
+
+// derived
+function allPieces(){
+  var out=P.map(function(p){return {id:p[0],track:p[1],composer:p[2],title:p[3],lvl:p[4],note:p[5]}});
+  S.custom.forEach(function(c){out.push({id:c.id,track:'mine',composer:c.composer,title:c.title,lvl:'',note:'',custom:true})});
+  return out;
+}
+function statusOf(id){return S.s[id]||'queue'}
+function mondayOffset(d){return (d.getDay()+6)%7}
+function lastSeven(){
+  var out=[],n=new Date();
+  for(var i=6;i>=0;i--){var d=new Date(n.getFullYear(),n.getMonth(),n.getDate()-i);out.push(d)}
+  return out;
+}
+function streak(){
+  var n=new Date(),c=0,i=0;
+  if(!(S.log[ds(n)]>0))i=1;
+  for(;;i++){
+    var d=new Date(n.getFullYear(),n.getMonth(),n.getDate()-i);
+    if(S.log[ds(d)]>0)c++;else break;
+    if(i>2000)break;
+  }
+  return c;
+}
+function weekNumber(){
+  if(!S.start)return 0;
+  var a=new Date(S.start+'T00:00:00'),b=new Date();
+  var diff=Math.floor((new Date(b.getFullYear(),b.getMonth(),b.getDate())-a)/86400000);
+  if(diff<0)return 0;
+  return Math.min(12,Math.floor(diff/7)+1);
+}
+
+// render
+function renderTiles(){
+  var seven=lastSeven(),mins=0;
+  seven.forEach(function(d){mins+=S.log[ds(d)]||0});
+  var pcs=allPieces(),play=pcs.filter(function(p){return statusOf(p.id)==='playable'}).length;
+  var learn=pcs.filter(function(p){var s=statusOf(p.id);return s==='learning'||s==='polishing'}).length;
+  var total=0,done=0;
+  ROAD.forEach(function(w,i){w[1].forEach(function(t,j){total++;if(S.t['r'+i+'_'+j])done++})});
+  var wk=weekNumber();
+  var pct=function(a,b){return Math.min(100,Math.round(a/b*100))};
+  $('tiles').innerHTML=
+   tile('Streak',streak(),'days',null)+
+   tile('Last 7 days',mins,'/ 210 min',pct(mins,210))+
+   tile('Can play',play,'of '+pcs.length+' ('+learn+' in progress)',pct(play,pcs.length))+
+   tile('Roadmap',done,'of '+total+' tasks'+(wk?' · week '+wk:''),pct(done,total));
+}
+function tile(lab,val,small,pct){
+  return '<div class="tile"><div class="lab">'+esc(lab)+'</div><div class="val">'+esc(val)+'<small>'+esc(small)+'</small></div>'+
+   (pct===null?'':'<div class="bar"><i style="width:'+pct+'%"></i></div>')+'</div>';
+}
+function renderKeys(){
+  var seven=lastSeven(),names=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],k='',n='',t=today();
+  seven.forEach(function(d){
+    var m=S.log[ds(d)]||0,h=Math.min(100,Math.round(m/30*100));
+    k+='<div class="key'+(ds(d)===t?' today':'')+'" title="'+m+' min"><div class="fill" style="height:'+h+'%"></div><span>'+(m?m:'')+'</span></div>';
+    n+='<div>'+names[d.getDay()]+'</div>';
+  });
+  $('keys').innerHTML=k;$('keynums').innerHTML=n;
+}
+function chips(id,list,cur,cb){
+  var el=$(id);el.innerHTML='';
+  [['all','All']].concat(list).forEach(function(x){
+    var b=document.createElement('button');b.type='button';b.className='chip';
+    b.setAttribute('aria-pressed',cur===x[0]?'true':'false');b.textContent=x[1];
+    b.onclick=function(){cb(x[0])};el.appendChild(b);
+  });
+}
+function renderFilters(){
+  chips('trackChips',TRACKS,fTrack,function(v){fTrack=v;renderFilters();renderPieces()});
+  chips('statusChips',STATUS,fStatus,function(v){fStatus=v;renderFilters();renderPieces()});
+}
+function renderPieces(){
+  var list=allPieces().filter(function(p){
+    return (fTrack==='all'||p.track===fTrack)&&(fStatus==='all'||statusOf(p.id)===fStatus);
+  });
+  if(!list.length){$('pieces').innerHTML='<p class="empty">Nothing here yet. Change a filter or add a piece below.</p>';return}
+  var h='';
+  list.forEach(function(p){
+    var st=statusOf(p.id),tn=TRACKS.filter(function(t){return t[0]===p.track})[0][1];
+    h+='<div class="piece"><div style="min-width:0"><div class="t">'+esc(p.title)+'</div>'+
+      '<div class="m">'+esc(p.composer||'')+(p.composer?' · ':'')+esc(tn)+(p.lvl?' · est. level '+esc(p.lvl):'')+'</div>'+
+      (p.note?'<div class="m">'+esc(p.note)+'</div>':'')+'</div>'+
+      '<div class="row" style="flex-wrap:nowrap"><select data-id="'+esc(p.id)+'" class="stsel s-'+st+'" aria-label="Status for '+esc(p.title)+'">'+
+      STATUS.map(function(s){return '<option value="'+s[0]+'"'+(s[0]===st?' selected':'')+'>'+s[1]+'</option>'}).join('')+
+      '</select>'+(p.custom?'<button type="button" data-del="'+esc(p.id)+'" aria-label="Remove '+esc(p.title)+'">×</button>':'')+'</div></div>';
+  });
+  $('pieces').innerHTML=h;
+}
+function renderRoad(){
+  var wk=weekNumber(),h='';
+  ROAD.forEach(function(w,i){
+    h+='<div class="week'+(wk===i+1?' now':'')+'"><h3>Week '+(i+1)+'<small>'+esc(w[0])+'</small></h3>';
+    w[1].forEach(function(t,j){
+      var id='r'+i+'_'+j;
+      h+='<label class="task"><input type="checkbox" data-t="'+id+'"'+(S.t[id]?' checked':'')+'><span>'+esc(t)+'</span></label>';
+    });
+    h+='</div>';
+  });
+  $('roadmap').innerHTML=h;
+}
+function renderHarm(){
+  var h='';
+  HARM.forEach(function(t,i){
+    var id='h'+i;
+    h+='<label class="task"><input type="checkbox" data-t="'+id+'"'+(S.t[id]?' checked':'')+'><span><b>Wk '+(i+1)+'.</b> '+esc(t)+'</span></label>';
+  });
+  $('harmony').innerHTML=h;
+}
+function renderCI(){
+  var tl=['None','Slight','Some','Noticeable','Pain'];
+  if(!S.ci.length){$('ciList').innerHTML='<p class="empty">No check-ins yet.</p>';$('ciWarn').innerHTML='';return}
+  var recent=S.ci.slice(-3).reverse(),h='';
+  recent.forEach(function(c){
+    h+='<div class="ci"><b>'+esc(c.d)+'</b> · tension: '+esc(tl[c.tension]||'')+' · '+esc(c.mood)+(c.note?'<br><span class="note">'+esc(c.note)+'</span>':'')+'</div>';
+  });
+  $('ciList').innerHTML=h;
+  var last=S.ci[S.ci.length-1];
+  $('ciWarn').innerHTML=(last&&last.tension>=3)?'<div class="warnbox">You reported tension or pain. Rest today, shorten sessions to 15 minutes, and see a physio if it lasts more than a few days.</div>':'';
+}
+function renderAll(){
+  renderTiles();renderKeys();renderFilters();renderPieces();renderRoad();renderHarm();renderCI();
+  $('startDate').value=S.start||'';
+  var sel=$('addTrack');
+  if(!sel.options.length){
+    var h='';TRACKS.forEach(function(t){if(t[0]!=='mine')h+='<option value="'+t[0]+'">'+t[1]+'</option>'});
+    sel.innerHTML=h;
+  }
+}
+
+// events
+document.addEventListener('change',function(e){
+  var t=e.target;
+  if(t.classList&&t.classList.contains('stsel')){
+    S.s[t.getAttribute('data-id')]=t.value;save();renderTiles();renderPieces();return;
+  }
+  if(t.getAttribute&&t.getAttribute('data-t')){
+    var id=t.getAttribute('data-t');
+    if(t.checked)S.t[id]=1;else delete S.t[id];
+    save();renderTiles();return;
+  }
+});
+document.addEventListener('click',function(e){
+  var d=e.target.getAttribute&&e.target.getAttribute('data-del');
+  if(d){
+    S.custom=S.custom.filter(function(c){return c.id!==d});delete S.s[d];
+    save();renderTiles();renderPieces();
+  }
+});
+$('done30').onclick=function(){S.log[today()]=30;save();renderTiles();renderKeys()};
+$('saveMin').onclick=function(){
+  var v=parseInt($('minInput').value,10);if(isNaN(v)||v<0)v=0;
+  if(v)S.log[today()]=v;else delete S.log[today()];
+  save();renderTiles();renderKeys();
+};
+$('startDate').onchange=function(){S.start=this.value;save();renderTiles();renderRoad()};
+$('addForm').onsubmit=function(e){
+  e.preventDefault();
+  var t=$('addTitle').value.trim();if(!t)return;
+  S.custom.push({id:'u'+Date.now(),title:t,composer:$('addComposer').value.trim()});
+  $('addTitle').value='';$('addComposer').value='';
+  save();renderTiles();renderPieces();
+};
+$('ciSave').onclick=function(){
+  S.ci.push({d:today(),tension:parseInt($('ciTension').value,10),mood:$('ciMood').value,note:$('ciNote').value.trim().slice(0,300)});
+  if(S.ci.length>40)S.ci=S.ci.slice(-40);
+  $('ciNote').value='';
+  save();renderCI();
+};
+
+// boot: render from this browser first, then upgrade to the shared store if it answers
+var local=lsGet();if(local)S=norm(local);
+if(!S.start){S.start=today()}
+renderAll();setStatusLine('Saved in this browser');
+
+if(window.claude&&claude.use){
+  Promise.all([claude.use('db'),claude.use('user')]).then(function(r){
+    db=r[0];var user=r[1];
+    if(!db||!user)return null;
+    return user.id().then(function(id){
+      if(!id)return;
+      uid=id;ref=db.doc('data/users/'+uid+'/state');
+      var first=true;
+      ref.onSnapshot(function(snap){
+        if(dirty||snap.metadata.hasPendingWrites)return;
+        if(snap.exists){S=norm(snap.data());if(!S.start)S.start=today();lsSet();renderAll();setStatusLine('Saved')}
+        else if(first){first=false;setStatusLine('Saved');if(local)save()}
+      },function(){ref=null;setStatusLine('Saved in this browser only')});
+    });
+  }).catch(function(){ref=null});
+}
+})();
+</script>
