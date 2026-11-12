@@ -125,12 +125,16 @@
     <h2 style="margin-top:14px;">Enquiry form</h2>
     <p class="sub">Takes about two minutes. Only the starred fields are required — the rest just helps me answer properly the first time.</p>
 
-    <!-- NETLIFY FORM. Required for capture: name="inquiry", data-netlify="true",
-         the hidden form-name matching the name, and an action to a real page (/thanks). -->
-    <form class="enq" name="inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks" onsubmit="return validateForm(event)">
-      <input type="hidden" name="form-name" value="inquiry">
+    <!-- FORMSPREE form (static-host compatible; Netlify Forms do NOT run on GitHub Pages).
+         SETUP — one step: create a free form at https://formspree.io, set its recipient to
+         hello@simplywedstudio.com, then replace YOUR_FORM_ID below with the form's ID
+         (the part after /f/ in your Formspree endpoint, e.g. https://formspree.io/f/abcdwxyz).
+         Fields email straight to you; "_next" sends the couple to /thanks after submit. -->
+    <form class="enq" method="POST" action="https://formspree.io/f/mrpqgrbr" onsubmit="return validateForm(event)">
       <input type="hidden" name="service" id="serviceInput" value="">
-      <p class="hp"><label>Don't fill this out: <input name="bot-field"></label></p>
+      <input type="hidden" name="_subject" value="New SimplyWed enquiry">
+      <input type="hidden" name="_next" value="https://simplywedstudio.com/thanks.html">
+      <p class="hp"><label>Don't fill this out: <input name="_gotcha"></label></p>
 
       <div class="f"><label>First name *</label><input type="text" name="first_name" id="first_name" placeholder="Alex"><div class="err" id="e_first"></div></div>
       <div class="f"><label>Last name</label><input type="text" name="last_name" placeholder="Nguyen"></div>
