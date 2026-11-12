@@ -1,127 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>About | SimplyWed Studio</title>
-<meta name="description" content="SimplyWed Studio — storytelling wedding &amp; elopement photography in Vancouver, BC. Candid over choreographed, light over flash, story over snapshots."/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18493262020"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18493262020');
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — SimplyWed Studio | Vancouver Wedding &amp; Elopement Photographer</title>
+<meta name="description" content="Dave photographs weddings and elopements across Vancouver and British Columbia. Calm, unobtrusive, available light, galleries that feel lived in rather than staged.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,200;1,9..144,300;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 <style>
-  .page-hero{padding:170px 0 0}
-  .page-hero .label{margin-bottom:20px;display:block}
-  .page-hero h1{font-size:clamp(2.8rem,6vw,5.4rem);max-width:14ch}
-  .page-hero h1 em{font-style:italic}
-  .story{padding-block:clamp(60px,8vw,110px)}
-  .story .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(28px,5vw,64px);align-items:center}
-  .story .ph{grid-column:1/6;aspect-ratio:4/5;overflow:hidden}
-  .story .tx{grid-column:7/13}
-  .story .tx p{color:var(--ink-soft);max-width:54ch;margin-bottom:16px;font-size:1.05rem}
-  .story .tx p.big{font-family:'Fraunces';font-style:italic;font-size:clamp(1.4rem,2.6vw,2rem);color:var(--ink);line-height:1.25;margin-bottom:26px}
-  .beliefs{background:var(--white);border-block:1px solid var(--line);padding-block:clamp(60px,8vw,110px)}
-  .beliefs .head{margin-bottom:52px}
-  .beliefs .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px}
-  .belief .n{font-family:'Fraunces';font-style:italic;font-size:1.4rem;color:var(--aqua-deep);display:block;margin-bottom:14px}
-  .belief h3{font-size:1.7rem;margin-bottom:10px;font-weight:400}
-  .belief p{color:var(--ink-soft)}
-  .cta-band{padding-block:clamp(64px,9vw,120px);text-align:center}
-  .cta-band h2{font-size:clamp(2rem,4.4vw,3.4rem);margin-bottom:12px}
-  .cta-band h2 em{font-style:italic;color:var(--aqua-deep)}
-  .cta-band p{color:var(--ink-soft);margin-bottom:28px}
-  .team{padding-block:clamp(50px,7vw,90px);border-top:1px solid var(--line)}
-  .team .label{display:block;margin-bottom:14px}
-  .team h2{font-size:clamp(1.9rem,4vw,3rem);margin-bottom:44px}
-  .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px)}
-  .member .ph{aspect-ratio:4/5;overflow:hidden;margin-bottom:20px}
-  .member h3{font-size:1.7rem;font-weight:400;margin-bottom:4px}
-  .member .role{font-family:'Jost';font-weight:500;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--aqua-deep);margin-bottom:12px}
-  .member p{color:var(--ink-soft);max-width:44ch}
+  /* page head — same dark band and type scale as the portfolio head */
+  .ahead{background:var(--ink-deep);color:#fff;}
+  .ahead h1{font-family:'Fraunces',serif;font-weight:200;font-size:clamp(46px,6.6vw,96px);line-height:1;letter-spacing:-.03em;margin:16px 0 20px;}
+  .ahead h1 em{font-weight:300;font-style:italic;color:var(--cyan);}
+  .ahead p{font-size:18px;color:var(--muted);max-width:560px;}
+
+  /* portrait + story */
+  .story{background:var(--white);border-bottom:1px solid var(--line);}
+  .story .grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,5vw,72px);align-items:start;}
+  .story .portrait{aspect-ratio:4/5;overflow:hidden;background:var(--img-ph);position:sticky;top:110px;}
+  .story .portrait img{width:100%;height:100%;object-fit:cover;}
+  .story h2{font-family:'Fraunces',serif;font-weight:200;font-size:clamp(38px,4.6vw,54px);letter-spacing:-.02em;line-height:1.1;margin:16px 0 24px;}
+  .story p{font-size:18px;color:var(--soft);margin-bottom:20px;max-width:560px;}
+  .story .sig{font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:26px;color:var(--ink);margin-top:34px;}
+
+  /* stats */
+  .stats{background:var(--cloud);border-bottom:1px solid var(--line);}
+  .stats .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,56px);}
+  .stats .n{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(38px,4.6vw,54px);color:var(--cyan-deep);line-height:1;}
+  .stats .l{font:500 11px 'Jost';letter-spacing:.2em;text-transform:uppercase;color:var(--soft);margin-top:12px;}
+  .stats .d{font-size:15px;color:var(--soft);margin-top:10px;max-width:280px;}
+
+  /* values */
+  .vals .head{border-top:1px solid var(--line);padding-top:26px;}
+  .vals h2{font-family:'Fraunces',serif;font-weight:200;font-size:clamp(34px,5vw,56px);letter-spacing:-.02em;line-height:1.08;}
+  .vals .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,44px);margin-top:44px;}
+  .vals .v .num{font:500 11px 'Jost';letter-spacing:.22em;color:var(--cyan-deep);}
+  .vals .v h3{font-family:'Fraunces',serif;font-weight:300;font-size:26px;line-height:1.2;margin:12px 0 12px;}
+  .vals .v p{font-size:16px;color:var(--soft);}
+
+  /* closer band */
+  .ctaband{background:var(--cyan);color:var(--cyan-on);}
+  .ctaband .wrap{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;}
+  .ctaband h2{font-family:'Fraunces',serif;font-weight:200;font-size:clamp(30px,4vw,50px);letter-spacing:-.02em;max-width:640px;line-height:1.05;}
+
   @media(max-width:860px){
-    .story .ph{grid-column:1/13;max-width:440px}.story .tx{grid-column:1/13}
-    .beliefs .grid{grid-template-columns:1fr;gap:32px}
-    .team-grid{grid-template-columns:1fr;gap:36px}.member .ph{max-width:400px}
+    .story .grid{grid-template-columns:1fr;}
+    .story .portrait{position:static;max-height:520px;}
+    .stats .grid{grid-template-columns:1fr;gap:34px;}
+    .vals .grid{grid-template-columns:1fr;gap:34px;}
   }
 </style>
 </head>
 <body>
-<header class="site-header solid edge">
-  <nav class="maxw nav">
-    <a class="brand" href="index.html"><img src="logo-wordmark.png" alt="SimplyWed — Photo &amp; Content Creation"/></a>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a><a href="about.html" class="active">About</a>
-      <a href="services.html">Services</a><a href="portfolio.html">Portfolio</a>
-      <a href="blog.html">Blog</a><a href="contact.html">Contact</a>
-      <a href="contact.html" class="book">Book a session</a>
-    </div>
-    <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">Menu</button>
-  </nav>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brandmark"><img src="assets/logo-wordmark.png" alt="SimplyWed Studio"></a>
+    <nav class="nav">
+      <a class="navlink" href="index.html">Home</a>
+      <a class="navlink active" href="about.html">About</a>
+      <a class="navlink" href="services.html">Services</a>
+      <a class="navlink" href="portfolio.html">Portfolio</a>
+      <a class="navlink" href="blog.html">Journal</a>
+      <a class="btn btn-cyan" href="contact.html">Book a date</a>
+    </nav>
+    <button class="menu-btn" aria-label="Menu" onclick="openMenu()">Menu</button>
+  </div>
 </header>
+<div class="scrim" id="scrim" onclick="closeMenu()"></div>
+<nav class="mnav" id="mnav">
+  <button class="close" aria-label="Close" onclick="closeMenu()">&times;</button>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+  <a href="portfolio.html">Portfolio</a><a href="blog.html">Journal</a><a href="contact.html">Contact</a>
+  <a class="btn btn-cyan" href="contact.html">Book a date</a>
+  <a class="mnav-contact" href="mailto:hello@simplywedstudio.com">hello@simplywedstudio.com</a>
+</nav>
 
-<section class="page-hero edge"><div class="maxw">
-  <span class="label">The Story</span>
-  <h1>Every couple deserves photos that feel as <em>real</em> as the moment itself.</h1>
+<section class="ahead"><div class="wrap">
+  <span class="eyebrow on-dark">The person behind the camera</span>
+  <h1>Hi, I'm <em>Dave.</em></h1>
+  <p>I photograph weddings and elopements across British Columbia. Mountaintop ceremonies, downtown ballrooms, and a lot of quiet moments in between.</p>
 </div></section>
 
-<section class="story edge"><div class="maxw grid">
-  <div class="ph"><img src="images/elope-candid.jpg" alt="SimplyWed Studio — candid Vancouver wedding photography"/></div>
-  <div class="tx">
-    <p class="big">SimplyWed Studio was built on a simple belief: wedding photography should capture who you actually are — not a posed, perfected version of your day.</p>
-    <p>Based in Vancouver, BC, we specialize in weddings and elopements that range from intimate ceremonies on mountain peaks to full receptions at the city's most beautiful venues. Whatever form your love story takes, our job is to document it honestly and beautifully.</p>
-    <p>We bring a calm, unobtrusive presence to every event — the kind where you forget the camera is there. The result is a collection of images that feel lived-in and true, not staged.</p>
-    <p style="color:var(--ink);font-family:'Fraunces';font-style:italic;font-size:1.2rem;margin-top:8px">This is storytelling photography, fueled by passion.</p>
+<section class="story"><div class="wrap"><div class="grid">
+  <div class="portrait" data-rv>
+    <img src="images/dave.jpg" alt="Dave, photographer and founder of SimplyWed Studio" style="object-position:center 0%;">
   </div>
-</div></section>
-
-<section class="team edge"><div class="maxw">
-  <span class="label">Meet the team</span>
-  <h2>The people behind the camera</h2>
-  <div class="team-grid">
-    <div class="member">
-      <div class="ph"><img src="images/dave.jpg" alt="Dave — SimplyWed Studio wedding photographer, Vancouver"/></div>
-      <h3>Dave</h3>
-      <div class="role">Photographer &amp; Founder</div>
-      <p>[Short bio — Dave to add.]</p>
-    </div>
-    <div class="member">
-      <div class="ph"><img src="images/nick.jpg" alt="Nick — SimplyWed Studio wedding photographer, Vancouver"/></div>
-      <h3>Nick</h3>
-      <div class="role">Photographer</div>
-      <p>[Short bio — Nick to add.]</p>
-    </div>
+  <div data-rv>
+    <span class="eyebrow">The story</span>
+    <h2>Calm on the day, honest in the gallery.</h2>
+    <p>I've been doing this for the better part of a decade. In that time I've learned the photos couples actually come back to are almost never the posed ones. They're the look someone gives across a room, the laugh that catches everybody off guard, the ten minutes you got alone before dinner started.</p>
+    <p>So that is what I shoot for. I stay calm, I stay out of the way, and I work with the light that is already there. Most couples tell me afterwards that they forgot I was in the room. That is the goal.</p>
+    <p>Your gallery should feel lived in, not staged. It should look like the day you actually had, on the best version of that day. No stiff group shots you will never print, no two hours of portraits while your friends are at the bar without you.</p>
+    <p>I'm based in Vancouver and I shoot all over the province. Sea-to-Sky, the Island, the Interior, the Fraser Valley. If you're getting married somewhere beautiful and slightly inconvenient, that is usually my favourite kind of job.</p>
+    <div class="sig">Dave</div>
+    <div style="margin-top:26px;"><a class="btn btn-ghost-light" href="portfolio.html">See the work</a></div>
   </div>
-</div></section>
+</div></div></section>
 
-<section class="beliefs edge"><div class="maxw">
-  <div class="head"><span class="label">What we believe</span></div>
+<section class="stats"><div class="wrap"><div class="grid">
+  <div data-rv>
+    <div class="n">10<span style="font-size:.6em;">+</span></div>
+    <div class="l">Years behind the camera</div>
+    <div class="d">Weddings and elopements, the better part of a decade of them.</div>
+  </div>
+  <div data-rv>
+    <div class="n">140<span style="font-size:.6em;">+</span></div>
+    <div class="l">Days documented</div>
+    <div class="d">From two people on a mountain to a full room of friends and family.</div>
+  </div>
+  <div data-rv>
+    <div class="n">All of BC</div>
+    <div class="l">Wherever the day happens</div>
+    <div class="d">Vancouver, the Sea-to-Sky, the Island, the Fraser Valley, the Interior.</div>
+  </div>
+</div></div></section>
+
+<section class="vals"><div class="wrap">
+  <div class="head" data-rv><h2>What I believe.</h2></div>
   <div class="grid">
-    <div class="belief"><span class="n">01</span><h3>Candid over choreographed.</h3><p>The best photos happen when people stop performing. We create the conditions for real moments to unfold.</p></div>
-    <div class="belief"><span class="n">02</span><h3>Light over flash.</h3><p>We work with available light whenever possible. It keeps things natural, beautiful, and true to how your day actually looked and felt.</p></div>
-    <div class="belief"><span class="n">03</span><h3>Story over snapshots.</h3><p>We're not collecting images — we're telling your story. Every photo connects to the next, building a narrative from start to finish.</p></div>
+    <div class="v" data-rv>
+      <div class="num">01</div>
+      <h3>Candid over choreographed.</h3>
+      <p>The best moments happen when people stop performing. My job is to make room for them and be ready when they arrive.</p>
+    </div>
+    <div class="v" data-rv>
+      <div class="num">02</div>
+      <h3>Light over flash.</h3>
+      <p>I work with the light that is already in the room wherever I can. It keeps the photos looking like the day actually looked.</p>
+    </div>
+    <div class="v" data-rv>
+      <div class="num">03</div>
+      <h3>Story over snapshots.</h3>
+      <p>A gallery should read from start to finish, not just collect nice frames. Every photo should earn the one after it.</p>
+    </div>
   </div>
 </div></section>
 
-<section class="cta-band edge"><div class="maxw">
-  <h2>Let's make something <em>beautiful.</em></h2>
-  <p>We'd love to hear about your plans.</p>
-  <a class="btn" href="contact.html">Get in touch</a>
+<section class="ctaband"><div class="wrap">
+  <h2>Tell me about your day.</h2>
+  <a class="btn btn-solid-dark" href="contact.html">Start a conversation →</a>
 </div></section>
 
-<footer class="site-footer edge"><div class="maxw">
-  <div class="rule"></div>
-  <div class="foot-grid">
-    <div><a class="brand" href="index.html"><img src="logo-wordmark-light.png" alt="SimplyWed Studio"/></a>
+<footer class="site-footer"><div class="wrap">
+  <div class="cols">
+    <div class="fw"><img src="assets/logo-wordmark-light.png" alt="SimplyWed Studio">
       <p>Wedding &amp; elopement photography in Vancouver, BC. Storytelling fueled by passion.</p></div>
-    <div><h4>Navigate</h4><ul>
-      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div class="connect"><h4>Connect</h4><ul>
-      <li><a href="https://www.instagram.com/simplywedstudio" target="_blank" rel="noopener">Instagram — @simplywedstudio</a></li>
-      <li><a href="mailto:dave@sowedding.ca">dave@sowedding.ca</a></li>
-      <li><a href="contact.html">Book a session →</a></li></ul></div>
+    <div class="fcol"><h4>Navigate</h4>
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a><a href="blog.html">Journal</a><a href="contact.html">Contact</a></div>
+    <div class="fcol"><h4>Connect</h4>
+      <a href="https://www.instagram.com/simplywedstudio">@simplywedstudio</a>
+      <a href="mailto:hello@simplywedstudio.com">hello@simplywedstudio.com</a>
+      <a href="contact.html">Book a session →</a></div>
   </div>
-  <div class="copyright">© 2026 SimplyWed Studio. All rights reserved. &nbsp;·&nbsp; Vancouver, BC · Canada</div>
+  <div class="copyright">© 2026 SimplyWed Studio · Vancouver, BC · Canada</div>
 </div></footer>
+
+<script>
+function openMenu(){document.getElementById('mnav').classList.add('open');document.getElementById('scrim').classList.add('open');}
+function closeMenu(){document.getElementById('mnav').classList.remove('open');document.getElementById('scrim').classList.remove('open');}
+</script>
 </body>
 </html>

@@ -1,129 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Journal | SimplyWed Studio</title>
-<meta name="description" content="The SimplyWed Studio journal — Vancouver elopement &amp; wedding planning guides, locations, timing, and real stories."/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18493262020"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18493262020');
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journal — SimplyWed Studio | Vancouver Wedding &amp; Elopement Photography</title>
+<meta name="description" content="Planning notes, real weddings and elopements, and honest advice from a Vancouver wedding photographer.">
+<link rel="canonical" href="https://simplywedstudio.com/blog.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,200;1,9..144,300;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 <style>
-  .page-hero{padding:170px 0 56px}
-  .page-hero .label{margin-bottom:20px;display:block}
-  .page-hero h1{font-size:clamp(2.8rem,6vw,5.4rem)}
-  .page-hero p{color:var(--ink-soft);max-width:48ch;margin-top:20px;font-size:1.08rem}
-  .posts{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(26px,3vw,44px);padding-bottom:clamp(60px,8vw,110px)}
-  .post{display:flex;flex-direction:column}
-  .post .ph{aspect-ratio:3/2;overflow:hidden;margin-bottom:18px}
-  .post .ph img{transition:transform .6s ease}
-  .post:hover .ph img{transform:scale(1.04)}
-  .post .meta{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--aqua-deep);margin-bottom:10px}
-  .post h2{font-family:'Fraunces';font-weight:400;font-size:1.5rem;line-height:1.16;margin-bottom:10px}
-  .post p{color:var(--ink-soft);font-size:.96rem;margin-bottom:14px}
-  .post .go{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:3px;align-self:flex-start}
-  .post:hover .go{color:var(--aqua-deep);border-color:var(--aqua-deep)}
-  .closer{background:var(--ink);color:#fff;text-align:center;padding-block:clamp(60px,8vw,110px)}
-  .closer h2{font-size:clamp(2rem,4.4vw,3.4rem);color:#fff;margin-bottom:14px}
-  .closer h2 em{font-style:italic;color:var(--aqua)}
-  .closer p{color:#c2c9cb;margin-bottom:26px}
-  @media(max-width:860px){.posts{grid-template-columns:1fr 1fr}}
-  @media(max-width:560px){.posts{grid-template-columns:1fr}}
+  .jhead{background:var(--ink-deep);color:#fff;}
+  .jhead h1{font-family:'Fraunces',serif;font-weight:200;font-size:clamp(46px,6.6vw,96px);line-height:1;letter-spacing:-.03em;margin:16px 0 20px;}
+  .jhead h1 em{font-weight:300;font-style:italic;color:var(--cyan);}
+  .jhead p{font-size:18px;color:var(--muted);max-width:560px;}
+
+  /* lead entry gets a wide two-column card, the rest a three-up grid */
+  .lead{border-bottom:1px solid var(--line);padding-bottom:clamp(48px,6vw,72px);}
+  .lead a{display:grid;grid-template-columns:7fr 5fr;gap:clamp(28px,4vw,56px);align-items:center;}
+  .lead .im{aspect-ratio:3/2;overflow:hidden;background:var(--img-ph);}
+  .lead .im img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease;}
+  .lead a:hover .im img{transform:scale(1.04);}
+  .lead h2{font-family:'Fraunces',serif;font-weight:200;font-size:clamp(30px,3.8vw,48px);
+    line-height:1.1;letter-spacing:-.022em;color:var(--ink);margin:14px 0 16px;}
+  .lead p{font-size:17px;color:var(--soft);max-width:460px;}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,40px);margin-top:clamp(48px,6vw,72px);}
+  .card{display:block;}
+  .card .im{aspect-ratio:3/2;overflow:hidden;background:var(--img-ph);}
+  .card .im img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease;}
+  .card:hover .im img{transform:scale(1.05);}
+  .card h2{font-family:'Fraunces',serif;font-weight:300;font-size:25px;line-height:1.22;color:var(--ink);margin:10px 0 12px;}
+  .card p{font-size:15px;color:var(--soft);}
+  .lab{font:500 10px 'Jost';letter-spacing:.22em;text-transform:uppercase;color:var(--cyan-deep);}
+  .date{font:400 12px 'Jost';letter-spacing:.14em;text-transform:uppercase;color:var(--soft);margin-top:14px;display:block;}
+
+  .ctaband{background:var(--cyan);color:var(--cyan-on);}
+  .ctaband .wrap{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;}
+  .ctaband h2{font-family:'Fraunces',serif;font-weight:200;font-size:clamp(30px,4vw,50px);letter-spacing:-.02em;max-width:640px;line-height:1.05;}
+
+  @media(max-width:900px){.grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:640px){.grid{grid-template-columns:1fr;} .lead a{grid-template-columns:1fr;gap:22px;}}
 </style>
 </head>
 <body>
-<header class="site-header solid edge">
-  <nav class="maxw nav">
-    <a class="brand" href="index.html"><img src="logo-wordmark.png" alt="SimplyWed — Photo &amp; Content Creation"/></a>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a><a href="about.html">About</a>
-      <a href="services.html">Services</a><a href="portfolio.html">Portfolio</a>
-      <a href="blog.html" class="active">Blog</a><a href="contact.html">Contact</a>
-      <a href="contact.html" class="book">Book a session</a>
-    </div>
-    <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">Menu</button>
-  </nav>
-</header>
 
-<section class="page-hero edge"><div class="maxw">
-  <span class="label">The Journal</span>
-  <h1>Planning notes &amp; real stories.</h1>
-  <p>Guides to eloping and marrying in Vancouver — locations, timing, and everything we've learned photographing them.</p>
-</div></section>
-
-<section class="edge"><div class="maxw posts">
-
-  <a class="post" href="blog/how-to-plan-a-vancouver-elopement.html">
-    <div class="ph"><img src="images/pl-veil-wind.jpg" alt="How to plan a Vancouver elopement"/></div>
-    <div class="meta">Elopements · Planning</div>
-    <h2>How to Plan a Vancouver Elopement</h2>
-    <p>The licence, the locations, the timing — everything you actually need, in the order you need it.</p>
-    <span class="go">Read →</span>
-  </a>
-
-  <a class="post" href="blog/the-best-elopement-locations-in-vancouver.html">
-    <div class="ph"><img src="images/loc-whytecliff-wide.jpg" alt="Best elopement locations in Vancouver"/></div>
-    <div class="meta">Elopements · Locations</div>
-    <h2>The Best Elopement Locations in Vancouver</h2>
-    <p>From old-growth forest to coastline to mountain peaks — where to say your vows.</p>
-    <span class="go">Read →</span>
-  </a>
-
-  <a class="post" href="blog/why-couples-are-choosing-elopements.html">
-    <div class="ph"><img src="images/wy-embrace-rocks.jpg" alt="Why couples are choosing elopements"/></div>
-    <div class="meta">Elopements</div>
-    <h2>Why Couples Are Choosing Elopements</h2>
-    <p>Less stress, more meaning — the case for a day built entirely around the two of you.</p>
-    <span class="go">Read →</span>
-  </a>
-
-  <a class="post" href="blog/best-time-of-year-to-get-married-in-vancouver.html">
-    <div class="ph"><img src="images/sn-mountain-epic.jpg" alt="Best time of year to get married in Vancouver"/></div>
-    <div class="meta">Weddings · Planning</div>
-    <h2>The Best Time of Year to Get Married in Vancouver</h2>
-    <p>Season by season — cherry blossoms, golden summers, moody autumns — and how to plan around the light.</p>
-    <span class="go">Read →</span>
-  </a>
-
-  <a class="post" href="blog/best-vancouver-venues-for-intimate-weddings.html">
-    <div class="ph"><img src="images/vn-wallace-skyline-embrace.jpg" alt="Best Vancouver venues for intimate weddings"/></div>
-    <div class="meta">Weddings · Venues</div>
-    <h2>Best Vancouver Venues for Intimate Weddings</h2>
-    <p>Six stunning spots made for micro weddings and ceremonies of twenty or fewer.</p>
-    <span class="go">Read →</span>
-  </a>
-
-  <a class="post" href="blog/fairmont-hotel-vancouver-wedding.html">
-    <div class="ph"><img src="images/fm-staircase-descent.jpg" alt="Fairmont Hotel Vancouver wedding — SimplyWed Studio"/></div>
-    <div class="meta">Weddings · Fairmont</div>
-    <h2>A Luxury Wedding at the Fairmont Hotel Vancouver</h2>
-    <p>Gilded ballrooms, cascading orchids, and black-tie elegance — Jayleen &amp; Ryan's Fairmont wedding day.</p>
-    <span class="go">Read →</span>
-  </a>
-
-</div></section>
-
-<section class="closer edge"><div class="maxw">
-  <h2>Planning your day? <em>Let's talk.</em></h2>
-  <p>We'd love to hear what you're dreaming up.</p>
-  <a class="btn light" href="contact.html">Get in touch</a>
-</div></section>
-
-<footer class="site-footer edge"><div class="maxw">
-  <div class="rule"></div>
-  <div class="foot-grid">
-    <div><a class="brand" href="index.html"><img src="logo-wordmark-light.png" alt="SimplyWed Studio"/></a>
-      <p>Wedding &amp; elopement photography in Vancouver, BC. Storytelling fueled by passion.</p></div>
-    <div><h4>Navigate</h4><ul>
-      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div class="connect"><h4>Connect</h4><ul>
-      <li><a href="https://www.instagram.com/simplywedstudio" target="_blank" rel="noopener">Instagram — @simplywedstudio</a></li>
-      <li><a href="mailto:dave@sowedding.ca">dave@sowedding.ca</a></li>
-      <li><a href="contact.html">Book a session →</a></li></ul></div>
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brandmark"><img src="assets/logo-wordmark.png" alt="SimplyWed Studio"></a>
+    <nav class="nav">
+      <a class="navlink" href="index.html">Home</a>
+      <a class="navlink" href="about.html">About</a>
+      <a class="navlink" href="services.html">Services</a>
+      <a class="navlink" href="portfolio.html">Portfolio</a>
+      <a class="navlink active" href="blog.html">Journal</a>
+      <a class="btn btn-cyan" href="contact.html">Book a date</a>
+    </nav>
+    <button class="menu-btn" aria-label="Menu" onclick="openMenu()">Menu</button>
   </div>
-  <div class="copyright">© 2026 SimplyWed Studio. All rights reserved. &nbsp;·&nbsp; Vancouver, BC · Canada</div>
+</header>
+<div class="scrim" id="scrim" onclick="closeMenu()"></div>
+<nav class="mnav" id="mnav">
+  <button class="close" aria-label="Close" onclick="closeMenu()">&times;</button>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="blog.html">Journal</a><a href="contact.html">Contact</a>
+  <a class="btn btn-cyan" href="contact.html">Book a date</a>
+  <a class="mnav-contact" href="mailto:hello@simplywedstudio.com">hello@simplywedstudio.com</a>
+</nav>
+
+<section class="jhead"><div class="wrap">
+  <span class="eyebrow on-dark">The journal</span>
+  <h1>Notes from <em>the field.</em></h1>
+  <p>Real days, planning advice, and the places around Vancouver worth getting married in. Written for couples who are in the middle of figuring it out.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="lead" data-rv>
+    <a href="blog/not-photo-people-camera-shy-couples.html">
+      <div class="im"><img src="images/wy-laughing-bw.jpg" alt="Black and white photograph of a couple laughing together on a rocky shoreline" style="object-position:center 20%;"></div>
+      <div>
+        <span class="lab">Latest · Advice</span>
+        <h2>You're not "photo people" — and that's fine</h2>
+        <p>Feel awkward in photos? Camera-shy couples are our specialty. Here's how we direct people who hate being photographed — and why your photos will still look like you.</p>
+        <span class="date">August 1, 2026</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="grid">
+    <a class="card" href="blog/how-to-choose-a-wedding-photographer-vancouver.html" data-rv>
+      <div class="im"><img src="images/pr-ring-exchange-arch.jpg" alt="Bride and groom exchanging rings under a floral arch with soft white drapes behind them as the officiant looks on" loading="lazy"></div>
+      <span class="date">November 10, 2026 · Advice</span>
+      <h2>7 questions to ask before you book a Vancouver wedding photographer</h2>
+      <p>What to ask beyond the portfolio: backup plans, file protection, delivery time, second shooters, contracts, and why raw files are the wrong ask.</p>
+    </a>
+    <a class="card" href="blog/wedding-day-timeline-vancouver.html" data-rv>
+      <div class="im"><img src="images/wy-sparklers.jpg" alt="Sparklers glowing in the foreground as a couple share a kiss at the water's edge" loading="lazy" style="object-position:center 45%;"></div>
+      <span class="date">November 3, 2026 · Planning</span>
+      <h2>A wedding day timeline that doesn't run late</h2>
+      <p>Where wedding day timelines actually break, the 15 minute buffer rule, and a sample 8 hour schedule that holds.</p>
+    </a>
+    <a class="card" href="blog/roundhouse-wedding-yaletown-vancouver.html" data-rv>
+      <div class="im"><img src="images/ln-couple-steam-engine-374-roundhouse.jpg" alt="Bride and groom standing in front of a black steam locomotive numbered 374 inside a heritage building" loading="lazy" style="object-position:center 45%;"></div>
+      <span class="date">October 31, 2026 · Weddings</span>
+      <h2>A Roundhouse Wedding in Yaletown</h2>
+      <p>Lauren and Nicholas married in August with a vintage convertible, a steam locomotive photo stop, cigars, and a Roundhouse reception in Yaletown. What a venue with a story does for your photos.</p>
+    </a>
+    <a class="card" href="blog/greek-orthodox-wedding-vancouver.html" data-rv>
+      <div class="im"><img src="images/dj-orthodox-ceremony-dome-wide.jpg" alt="Wide view inside a Greek Orthodox church with a painted dome, a full congregation, and the couple at the front" loading="lazy" style="object-position:center 50%;"></div>
+      <span class="date">October 30, 2026 · Weddings</span>
+      <h2>A Greek Orthodox Wedding in Vancouver</h2>
+      <p>Demetra and Johnny married in a Greek Orthodox church in Vancouver, then partied under a clear tent beside the river. How to plan photography for a long traditional ceremony and a big night.</p>
+    </a>
+    <a class="card" href="blog/nitobe-garden-wedding-ubc-vancouver.html" data-rv>
+      <div class="im"><img src="images/sv-nitobe-gate-couple-holding-hands.jpg" alt="Bride and groom holding hands in front of a traditional wooden gate with a tiled roof" loading="lazy" style="object-position:center 50%;"></div>
+      <span class="date">October 29, 2026 · Weddings</span>
+      <h2>A Nitobe Garden Wedding at UBC</h2>
+      <p>Sara and Vincent married in Nitobe Memorial Garden at UBC. A red gown tea ceremony, a first look on a staircase, a white convertible, and why a garden suits a small guest list.</p>
+    </a>
+    <a class="card" href="blog/oceanfront-garden-tent-wedding-vancouver.html" data-rv>
+      <div class="im"><img src="images/fs-vows-oceanfront-mountains.jpg" alt="Bride and groom facing each other with their officiant on a lawn with the ocean and mountains behind" loading="lazy" style="object-position:center 50%;"></div>
+      <span class="date">October 28, 2026 · Weddings</span>
+      <h2>A Vancouver Oceanfront Garden Wedding with a Tent</h2>
+      <p>Fiona and Shomari got ready on a downtown hotel balcony, married on a lawn at the edge of the water, and partied under a chandelier tent. The plan worth copying, and why a grey sky helped.</p>
+    </a>
+    <a class="card" href="blog/hycroft-manor-terrace-ceremony-wedding.html" data-rv>
+      <div class="im"><img src="images/hy2-couple-terrace-balustrade-hedges.jpg" alt="Bride and groom holding hands on a stone terrace with a balustrade and trimmed hedges behind them" loading="lazy" style="object-position:center 50%;"></div>
+      <span class="date">October 27, 2026 · Weddings</span>
+      <h2>A Hycroft Manor Terrace Wedding on a Grey Day</h2>
+      <p>Bessie and Raymond married on the covered terrace at Hycroft Manor on a grey day. A tea ceremony, guests under umbrellas, and why this venue gives you four looks in one footprint.</p>
+    </a>
+    <a class="card" href="blog/hycroft-manor-wedding-vancouver-snow.html" data-rv>
+      <div class="im"><img src="images/hy-couple-snow-mansion-steps.jpg" alt="Bride and groom walking hand in hand on a snowy path in front of a stone mansion" loading="lazy" style="object-position:center 55%;"></div>
+      <span class="date">October 26, 2026 · Weddings</span>
+      <h2>A Hycroft Manor Wedding in the Snow</h2>
+      <p>Teresa and Victor married at Hycroft Manor on a snow day. A morning tea ceremony at home, a corgi in the street, and what a mansion with real rooms does for a Vancouver winter wedding.</p>
+    </a>
+    <a class="card" href="blog/documentary-vs-posed-wedding-photography.html" data-rv>
+      <div class="im"><img src="images/pl-twirl-bw.jpg" alt="Black and white photograph of a bride twirling under her groom's arm" loading="lazy"></div>
+      <span class="date">October 15, 2026 · Advice</span>
+      <h2>Documentary vs posed: what "candid" really means</h2>
+      <p>What candid wedding photography really means, where posed still wins, and how to tell what a photographer actually shoots.</p>
+    </a>
+    <a class="card" href="blog/engagement-photo-locations-vancouver.html" data-rv>
+      <div class="im"><img src="images/loc-whytecliff-wide.jpg" alt="Couple standing on the rocky shore at Whytecliff Park with Whyte Islet behind them" loading="lazy"></div>
+      <span class="date">October 15, 2026 · Engagement</span>
+      <h2>The best engagement photo locations around Vancouver</h2>
+      <p>Choose by vibe, not by popularity: rocky coast, field, rainforest or city edges, and why timing beats location.</p>
+    </a>
+    <a class="card" href="blog/small-wedding-vancouver-30-guests.html" data-rv>
+      <div class="im"><img src="images/vn-sweetheart-table-florals.jpg" alt="Sweetheart table backed by a neon sign and a wall of peach and coral florals" loading="lazy"></div>
+      <span class="date">October 13, 2026 · Planning</span>
+      <h2>Planning a 30 person wedding in Vancouver</h2>
+      <p>Why 30 guests is a real wedding, how to pick the room, where small weddings should spend, and a timeline that fits.</p>
+    </a>
+    <a class="card" href="blog/how-many-hours-of-wedding-photography.html" data-rv>
+      <div class="im"><img src="images/fm-getting-ready.jpg" alt="Bride and groom relaxing in the Fairmont's wood-panelled lounge before the ceremony" loading="lazy" style="object-position:center 40%;"></div>
+      <span class="date">October 13, 2026 · Planning</span>
+      <h2>How many hours of wedding photography do you need?</h2>
+      <p>What 5, 8 and 10 hours of coverage actually get you, real prices, and why adding hours later costs more.</p>
+    </a>
+    <a class="card" href="blog/wedding-content-creator-vancouver.html" data-rv>
+      <div class="im"><img src="images/vn-wallace-skyline-embrace.jpg" alt="Newlyweds holding each other on the terrace at The Wallace, the downtown Vancouver skyline across the harbour behind them" loading="lazy" style="object-position:center 30%;"></div>
+      <span class="date">October 6, 2026 · Planning</span>
+      <h2>Why we send a content creator with the photographer</h2>
+      <p>What a wedding content creator shoots, why one person should not do both jobs, what the SOCIAL package costs, and who should skip it.</p>
+    </a>
+    <a class="card" href="blog/first-look-vs-aisle-reveal.html" data-rv>
+      <div class="im"><img src="images/fm-altar-first-look.jpg" alt="Groom at the front of the ceremony watching his bride approach, her lace veil in the foreground" loading="lazy" style="object-position:65% 30%;"></div>
+      <span class="date">September 29, 2026 · Planning</span>
+      <h2>First look or aisle reveal? The honest tradeoff</h2>
+      <p>What a first look buys you, what the aisle reveal gives you that nothing else can, the middle option people forget, and three questions that settle it.</p>
+    </a>
+    <a class="card" href="blog/engagement-photo-outfits-that-age-well.html" data-rv>
+      <div class="im"><img src="images/wy-embrace-rocks.jpg" alt="Couple in neutral knitwear holding each other against weathered rock on a quiet stretch of coastline" loading="lazy" style="object-position:center 45%;"></div>
+      <span class="date">September 22, 2026 · Advice</span>
+      <h2>Engagement outfits that still look good in five years</h2>
+      <p>What ages badly, what holds up, how to coordinate without matching, and the two outfit plan we give every couple before they go shopping.</p>
+    </a>
+    <a class="card" href="blog/rainy-wedding-day-vancouver.html" data-rv>
+      <div class="im"><img src="images/loc-forest-path.jpg" alt="Couple holding each other on a damp mossy trail under West Coast rainforest canopy" loading="lazy" style="object-position:center 42%;"></div>
+      <span class="date">September 15, 2026 · Planning</span>
+      <h2>Rain on your wedding day is not a disaster</h2>
+      <p>It rains here. Why overcast is the light we would have picked anyway, what actually goes wrong on a wet wedding day, and the rain plan worth making in month two.</p>
+    </a>
+    <a class="card" href="blog/ubc-boathouse-wedding-richmond.html" data-rv>
+      <div class="im"><img src="images/sj-couple-walking-boathouse-hero.jpg" alt="Bride and groom walking across a concrete dock past the glass wall of a riverside boathouse" loading="lazy" style="object-position:center 45%;"></div>
+      <span class="date">September 8, 2026 · Weddings</span>
+      <h2>A UBC Boathouse Wedding in Richmond</h2>
+      <p>Sarah and Josh married at the UBC Boathouse in Richmond on the hottest weekend in July. Umbrellas for shade, donuts instead of cake, and why west facing water is a light source and not a view.</p>
+    </a>
+    <a class="card" href="blog/hart-house-restaurant-wedding-burnaby.html" data-rv>
+      <div class="im"><img src="images/hh-deer-lake-garden-umbrella-hero.jpg" alt="Bride and groom walking a wet garden path under a single white umbrella with autumn leaves overhead" loading="lazy" style="object-position:center 50%;"></div>
+      <span class="date">September 1, 2026 · Weddings</span>
+      <h2>A Hart House Restaurant Wedding on Deer Lake</h2>
+      <p>Havana and Eric married in a Tudor heritage house in Burnaby with twenty guests and steady October rain. Why the weather made the day better, and what a white umbrella is actually for.</p>
+    </a>
+    <a class="card" href="blog/north-vancouver-rooftop-wedding.html" data-rv>
+      <div class="im"><img src="images/nv-rooftop-hero-skyline.jpg" alt="Bride and groom on an open rooftop deck with Burrard Inlet and the downtown Vancouver skyline behind them" loading="lazy" style="object-position:center 45%;"></div>
+      <span class="date">August 25, 2026 · Weddings</span>
+      <h2>A North Vancouver Rooftop Wedding on the Waterfront</h2>
+      <p>Emma and Hossein married on an open deck above Burrard Inlet in late July. The whole day in one building, and an honest look at what a rooftop charges you for that view.</p>
+    </a>
+    <a class="card" href="blog/polygon-gallery-wedding-north-vancouver.html" data-rv>
+      <div class="im"><img src="images/ch-shipyards-sunset-skyline.jpg" alt="Christine and Hugh at golden hour on the North Vancouver waterfront with the pier and boats behind them" loading="lazy" style="object-position:center 40%;"></div>
+      <span class="date">August 18, 2026 · Weddings</span>
+      <h2>A Polygon Gallery Wedding in North Vancouver</h2>
+      <p>Christine and Hugh married twice in one day. A tea ceremony at seven in the morning, then a gallery on the Shipyards waterfront with the skyline sitting in the window.</p>
+    </a>
+    <a class="card" href="blog/fairmont-pacific-rim-wedding.html" data-rv>
+      <div class="im"><img src="images/pr-couple-arch-forehead.jpg" alt="Chelsea and Andrew resting their foreheads together beside a floral arch at the Fairmont Pacific Rim" loading="lazy" style="object-position:center 42%;"></div>
+      <span class="date">August 18, 2026 · Weddings</span>
+      <h2>A Fairmont Pacific Rim Wedding in Downtown Vancouver</h2>
+      <p>Chelsea and Andrew married in a ballroom made of glass, took portraits on a rooftop garden four floors up, and had half their family watching from a screen in the corner.</p>
+    </a>
+    <a class="card" href="blog/vancouver-wedding-cost-2026.html" data-rv>
+      <div class="im"><img src="images/fm-ballroom-wide.jpg" alt="A candlelit ballroom set for a wedding reception with tall floral centrepieces on every table" loading="lazy"></div>
+      <span class="date">August 1, 2026 · Planning</span>
+      <h2>What a Vancouver wedding actually costs in 2026</h2>
+      <p>An honest line-item breakdown of what a Vancouver wedding costs in 2026 — venue, catering, photography, florals — and where we'd actually cut.</p>
+    </a>
+    <a class="card" href="blog/a-city-to-sea-vancouver-engagement.html" data-rv>
+      <div class="im"><img src="images/ea-cover.jpg" alt="Eunice and Ashan in white, backlit on a golden lawn near UBC" loading="lazy" style="object-position:center 67%;"></div>
+      <span class="date">July 30, 2026 · Engagements</span>
+      <h2>A City-to-Sea Vancouver Engagement — Eunice &amp; Ashan</h2>
+      <p>A two-look Vancouver engagement session — spring gardens near UBC by day, golden hour on English Bay by evening. Eunice &amp; Ashan, by SimplyWed Studio.</p>
+    </a>
+    <a class="card" href="blog/west-vancouver-oceanside-engagement.html" data-rv>
+      <div class="im"><img src="images/ac-cover.jpg" alt="Aneeta and Christian in a quiet embrace at the water's edge, an island of Howe Sound behind them" loading="lazy"></div>
+      <span class="date">July 30, 2026 · Engagements</span>
+      <h2>A West Vancouver Oceanside Engagement — Aneeta &amp; Christian</h2>
+      <p>A West Vancouver oceanside engagement session on the rocky Howe Sound coastline — soft daylight to golden hour, sea islands, and sparklers at dusk, by SimplyWed Studio.</p>
+    </a>
+    <a class="card" href="blog/fairmont-hotel-vancouver-wedding.html" data-rv>
+      <div class="im"><img src="images/fm-staircase-descent.jpg" alt="Bride in a lace gown descending the grand staircase at the Fairmont Hotel Vancouver" loading="lazy" style="object-position:center 47%;"></div>
+      <span class="date">May 17, 2026 · Weddings</span>
+      <h2>A Luxury Wedding at the Fairmont Hotel Vancouver</h2>
+      <p>A luxury wedding at the Fairmont Hotel Vancouver — gilded ballrooms, cascading orchids, and timeless black-tie elegance. Jayleen &amp; Ryan&#x27;s day, by SimplyWed Studio.</p>
+    </a>
+    <a class="card" href="blog/how-to-plan-a-vancouver-elopement.html" data-rv>
+      <div class="im"><img src="images/pl-veil-wind.jpg" alt="Bride's veil catching the wind as she and her groom walk with mountains behind them" loading="lazy"></div>
+      <span class="date">May 17, 2026 · Elopements · Planning</span>
+      <h2>How to Plan a Vancouver Elopement</h2>
+      <p>Planning a Vancouver elopement? Here&#x27;s everything you need — choosing a location, the BC marriage licence, hiring a photographer, and nailing your day-of timeline.</p>
+    </a>
+    <a class="card" href="blog/best-time-of-year-to-get-married-in-vancouver.html" data-rv>
+      <div class="im"><img src="images/sn-mountain-epic.jpg" alt="Bride and groom standing small against a wide backdrop of BC mountains and cloud" loading="lazy"></div>
+      <span class="date">May 1, 2026 · Weddings · Planning</span>
+      <h2>The Best Time of Year to Get Married in Vancouver</h2>
+      <p>Summer isn&#x27;t always the best season for a Vancouver wedding. An honest, season-by-season breakdown of light, weather and crowds — from a Vancouver wedding photographer.</p>
+    </a>
+    <a class="card" href="blog/best-vancouver-venues-for-intimate-weddings.html" data-rv>
+      <div class="im"><img src="images/vn-wallace-skyline-embrace.jpg" alt="Couple embracing on the terrace at The Wallace with the Vancouver skyline behind them" loading="lazy"></div>
+      <span class="date">May 1, 2026 · Weddings · Venues</span>
+      <h2>Best Vancouver Venues for Intimate Weddings</h2>
+      <p>Looking for a small wedding venue in Vancouver? Six stunning spots for intimate ceremonies and micro weddings — with the views and atmosphere to match.</p>
+    </a>
+    <a class="card" href="blog/the-best-elopement-locations-in-vancouver.html" data-rv>
+      <div class="im"><img src="images/loc-whytecliff-wide.jpg" alt="Couple standing on the rocky shore at Whytecliff Park with Whyte Islet behind them" loading="lazy"></div>
+      <span class="date">May 1, 2026 · Elopements · Locations</span>
+      <h2>The Best Elopement Locations in Vancouver</h2>
+      <p>The best places to elope in Vancouver — from old-growth forest and rugged coastline to mountain peaks — chosen by a local Vancouver elopement photographer.</p>
+    </a>
+    <a class="card" href="blog/why-couples-are-choosing-elopements.html" data-rv>
+      <div class="im"><img src="images/wy-embrace-rocks.jpg" alt="Couple holding each other against the rocks on a quiet stretch of coastline" loading="lazy" style="object-position:center 21%;"></div>
+      <span class="date">May 1, 2026 · Elopements</span>
+      <h2>Why Couples Are Choosing Elopements</h2>
+      <p>More Vancouver couples are choosing elopements over big weddings — less stress, more meaning. Here&#x27;s why, and what an intimate day can look like.</p>
+    </a>
+  </div>
+</div></section>
+
+<section class="ctaband"><div class="wrap">
+  <h2>Still deciding? I'm happy to talk it through.</h2>
+  <a class="btn btn-solid-dark" href="contact.html">Get in touch →</a>
+</div></section>
+
+<footer class="site-footer"><div class="wrap">
+  <div class="cols">
+    <div class="fw"><img src="assets/logo-wordmark-light.png" alt="SimplyWed Studio">
+      <p>Wedding &amp; elopement photography in Vancouver, BC. Storytelling fueled by passion.</p></div>
+    <div class="fcol"><h4>Navigate</h4>
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a><a href="blog.html">Journal</a><a href="contact.html">Contact</a></div>
+    <div class="fcol"><h4>Connect</h4>
+      <a href="https://www.instagram.com/simplywedstudio">@simplywedstudio</a>
+      <a href="mailto:hello@simplywedstudio.com">hello@simplywedstudio.com</a>
+      <a href="contact.html">Book a session →</a></div>
+  </div>
+  <div class="copyright">© 2026 SimplyWed Studio · Vancouver, BC · Canada</div>
 </div></footer>
+
+<script>
+function openMenu(){document.getElementById('mnav').classList.add('open');document.getElementById('scrim').classList.add('open');}
+function closeMenu(){document.getElementById('mnav').classList.remove('open');document.getElementById('scrim').classList.remove('open');}
+</script>
 </body>
 </html>

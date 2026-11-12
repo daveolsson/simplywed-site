@@ -1,180 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>SimplyWed Studio | Vancouver Wedding &amp; Elopement Photography</title>
-<meta name="description" content="SimplyWed Studio — storytelling wedding &amp; elopement photography in Vancouver, BC. Candid, light-filled, real. Engagement, proposal, and wedding coverage."/>
-<meta property="og:title" content="SimplyWed Studio | Vancouver Wedding &amp; Elopement Photography"/>
-<meta property="og:description" content="Gentle moments, lasting impressions — storytelling photography fueled by passion."/>
-<meta property="og:image" content="images/elope-hero.jpg"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18493262020"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18493262020');
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SimplyWed Studio — Wedding &amp; Elopement Photography | Vancouver, BC</title>
+<meta name="description" content="Gentle, editorial wedding and elopement photography for couples across Vancouver and the Sea-to-Sky. Your day, as real in the gallery as it felt in person.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,200;1,9..144,300;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 <style>
-  /* ---- home hero ---- */
-  .hero{position:relative;height:100svh;min-height:600px}
-  .hero .bg{position:absolute;inset:0}
-  .hero .bg img{object-position:50% 40%}
-  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.42),rgba(0,0,0,.14) 32%,rgba(0,0,0,.68))}
-  .hero .inner{position:relative;z-index:5;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(48px,8vw,96px);color:#fff}
-  .hero .eyebrow{color:#fff;opacity:.9}
-  .hero h1{font-size:clamp(3rem,8vw,7rem);color:#fff;max-width:16ch}
-  .hero h1 em{font-style:italic}
-  .hero p{max-width:46ch;font-size:1.12rem;color:#f2f0ec;margin:22px 0 32px}
-  .hero .cta-row{display:flex;gap:16px;flex-wrap:wrap}
-  .site-header.on-hero .brand img{filter:none}
-  .site-header.on-hero .nav-links a{color:#fff}
-  .site-header.on-hero .nav-links .book{border-color:rgba(255,255,255,.6)}
-  .site-header.on-hero .nav-links .book:hover{background:#fff;color:var(--ink)}
-  .site-header.on-hero .hamburger{color:#fff}
+  /* HERO */
+  .hero{position:relative;height:820px;max-height:92vh;display:flex;align-items:flex-end;overflow:hidden;}
+  .hero .bg{position:absolute;inset:0;background:var(--img-ph);}
+  /* 52% keeps the couple centred once the narrow phone crop takes ~700px off the
+     width; on desktop the frame is wider than the box so nothing is cut at all. */
+  .hero .bg img{width:100%;height:100%;object-fit:cover;object-position:52% 50%;}
+  /* NB: not .scrim — that class is the mobile-nav backdrop in style.css and carries
+     opacity:0, which silently hid this gradient and left the headline unreadable. */
+  .hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(24,26,29,.5),rgba(24,26,29,.08) 28%,rgba(24,26,29,.40) 54%,rgba(24,26,29,.78));}
+  /* same treatment the portfolio feature captions use: a soft shadow keeps the
+     cyan eyebrow legible where the photo runs light behind it */
+  .hero .inner{position:relative;z-index:2;width:100%;padding-bottom:clamp(48px,6vw,84px);
+    text-shadow:0 1px 18px rgba(16,18,20,.45);}
+  .hero h1{font-family:'Fraunces',serif;font-weight:200;font-size:clamp(46px,8.2vw,104px);line-height:1;letter-spacing:-.025em;color:#fff;margin:10px 0 26px;}
+  .hero h1 em{font-weight:300;font-style:italic;}
+  .hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;}
+  .hero-row p{color:rgba(255,255,255,.9);font-size:19px;max-width:440px;font-weight:300;}
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap;}
 
-  /* ---- intro ---- */
-  .intro{padding-block:clamp(70px,10vw,130px)}
-  .intro .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:end}
-  .intro .lead{grid-column:1/10;font-size:clamp(1.6rem,3.4vw,2.9rem);line-height:1.16}
-  .intro .lead em{font-style:italic;color:var(--aqua-deep)}
+  /* INTRO */
+  .intro{background:var(--cloud);}
+  .intro .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:40px;align-items:end;}
+  .intro .lead{grid-column:1/11;font-family:'Fraunces',serif;font-weight:200;font-size:clamp(30px,4.4vw,46px);line-height:1.22;letter-spacing:-.02em;color:var(--ink);}
+  .intro .stat{grid-column:11/13;text-align:right;}
+  .intro .stat .n{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(40px,5vw,52px);color:var(--cyan);line-height:1;}
+  .intro .stat .l{font:500 11px 'Jost';letter-spacing:.2em;text-transform:uppercase;color:var(--soft);margin-top:10px;}
 
-  /* ---- category trio ---- */
-  .work .head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:44px;flex-wrap:wrap;gap:14px}
-  .cats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .cat{position:relative;display:block;overflow:hidden;aspect-ratio:3/4}
-  .cat img{transition:transform .6s ease}
-  .cat:hover img{transform:scale(1.05)}
-  .cat::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.5),transparent 55%)}
-  .cat .t{position:absolute;left:22px;bottom:20px;z-index:2;color:#fff}
-  .cat .t .label{color:#fff;opacity:.85}
-  .cat .t h3{font-size:1.9rem;color:#fff;margin-top:4px}
-  .work .more{margin-top:36px}
+  /* SELECTED WORK */
+  .work .head{display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid var(--line);padding-top:26px;gap:24px;flex-wrap:wrap;}
+  .work h2{font-family:'Fraunces',serif;font-weight:200;font-size:clamp(34px,5vw,56px);letter-spacing:-.02em;line-height:1.08;}
+  .work .meta{font:500 11px 'Jost';letter-spacing:.2em;text-transform:uppercase;color:var(--soft);}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;}
+  .wcard{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--img-ph);display:block;}
+  /* per-card object-position is set inline: each frame puts its couple somewhere
+     different, and a 3/4 card crops hard enough to behead them at the default. */
+  .wcard img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
+  .wcard:hover img{transform:scale(1.05);}
+  .wcard .scr{position:absolute;inset:0;background:linear-gradient(0deg,rgba(24,26,29,.62),transparent 52%);}
+  .wcard .cap{position:absolute;left:24px;bottom:22px;z-index:2;}
+  .wcard .eb{font:500 11px 'Jost';letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);}
+  .wcard .t{font-family:'Fraunces',serif;font-weight:300;font-size:30px;color:#fff;margin-top:6px;}
 
-  /* ---- links strip ---- */
-  .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .strip .grid{display:grid;grid-template-columns:repeat(3,1fr)}
-  .strip a{padding:clamp(36px,5vw,64px) 8px;display:flex;flex-direction:column;gap:6px;border-left:1px solid var(--line);transition:.25s}
-  .strip a:first-child{border-left:0}
-  .strip a:hover{background:var(--white)}
-  .strip a .k{font-family:'Fraunces';font-size:clamp(1.5rem,2.6vw,2.1rem)}
-  .strip a .go{font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--aqua-deep)}
+  /* ABOUT */
+  .about{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .about .grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,5vw,72px);align-items:center;}
+  .about .portrait{aspect-ratio:4/5;overflow:hidden;background:var(--img-ph);}
+  .about .portrait img{width:100%;height:100%;object-fit:cover;}
+  .about h2{font-family:'Fraunces',serif;font-weight:200;font-size:clamp(38px,4.6vw,54px);letter-spacing:-.02em;line-height:1.1;margin:16px 0 22px;}
+  .about p{font-size:18px;color:var(--soft);margin-bottom:18px;max-width:520px;}
 
-  /* ---- closer ---- */
-  .closer{position:relative;background:var(--ink);color:#fff;text-align:left}
-  .closer .grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:stretch}
-  .closer .tx{padding:clamp(64px,9vw,120px) clamp(20px,5vw,72px)}
-  .closer .eyebrow{color:var(--aqua)}
-  .closer h2{font-size:clamp(2.4rem,5vw,4.2rem);color:#fff;max-width:16ch}
-  .closer h2 em{font-style:italic;color:var(--aqua)}
-  .closer p{color:#c2c9cb;max-width:40ch;margin:22px 0 32px}
-  .closer .ph{position:relative;overflow:hidden;min-height:340px}
+  /* INSTAGRAM */
+  .feed .head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:30px;}
+  .feed h2{font-family:'Fraunces',serif;font-weight:200;font-size:clamp(30px,4vw,46px);letter-spacing:-.02em;}
+  .feed .strip{gap:14px;scroll-snap-type:x mandatory;}
+  .feed .strip a{flex:0 0 auto;width:288px;height:360px;scroll-snap-align:start;}
+
+  /* CLOSER */
+  .closer{background:var(--ink-deep);color:#fff;padding:0;}
+  .closer .grid{display:grid;grid-template-columns:1.05fr .95fr;min-height:520px;}
+  .closer .txt{padding:clamp(56px,7vw,110px) clamp(24px,4vw,80px);display:flex;flex-direction:column;justify-content:center;}
+  .closer h2{font-family:'Fraunces',serif;font-weight:200;font-size:clamp(40px,5.4vw,62px);line-height:1.05;letter-spacing:-.025em;margin:18px 0 22px;}
+  .closer p{color:var(--muted);font-size:18px;max-width:440px;margin-bottom:30px;}
+  .closer .img{background:var(--img-ph);}
+  .closer .img img{width:100%;height:100%;object-fit:cover;}
 
   @media(max-width:860px){
-    .intro .lead{grid-column:1/13}
-    .cats{grid-template-columns:1fr;gap:16px}
-    .cat{aspect-ratio:16/10}
-    .strip .grid{grid-template-columns:1fr}
-    .strip a{border-left:0;border-top:1px solid var(--line)}
-    .strip a:first-child{border-top:0}
-    .closer .grid{grid-template-columns:1fr}
-    .closer .ph{min-height:300px;order:-1}
+    .intro .grid{grid-template-columns:1fr;gap:28px;}
+    .intro .lead,.intro .stat{grid-column:auto;text-align:left;}
+    .intro .stat{text-align:left;}
+    .cards{grid-template-columns:1fr;}
+    .about .grid{grid-template-columns:1fr;}
+    .closer .grid{grid-template-columns:1fr;}
+    .closer .img{min-height:340px;}
+    /* phone crop is brighter than the desktop frame, so the lower half of the scrim
+       carries a little more weight to keep the headline crisp */
+    .hero .veil{background:linear-gradient(180deg,rgba(24,26,29,.46),rgba(24,26,29,.06) 30%,rgba(24,26,29,.44) 60%,rgba(24,26,29,.8));}
   }
 </style>
 </head>
 <body>
 
-<!-- ============ HEADER ============ -->
-<header class="site-header on-hero edge">
-  <nav class="maxw nav">
-    <a class="brand" href="index.html"><img src="logo-wordmark-light.png" alt="SimplyWed — Photo &amp; Content Creation"/></a>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-      <a href="contact.html" class="book">Book a session</a>
-    </div>
-    <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">Menu</button>
-  </nav>
+<!-- HEADER -->
+<header class="site-header transparent">
+  <div class="wrap">
+    <a href="index.html" class="brandmark"><img src="assets/logo-wordmark-light.png" alt="SimplyWed Studio"></a>
+    <nav class="nav">
+      <a class="navlink active" href="index.html">Home</a>
+      <a class="navlink" href="about.html">About</a>
+      <a class="navlink" href="services.html">Services</a>
+      <a class="navlink" href="portfolio.html">Portfolio</a>
+      <a class="navlink" href="blog.html">Journal</a>
+      <a class="btn btn-cyan" href="contact.html">Book a date</a>
+    </nav>
+    <button class="menu-btn" aria-label="Menu" onclick="openMenu()">Menu</button>
+  </div>
 </header>
 
-<!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="bg"><img src="images/elope-hero.jpg" alt="Vancouver elopement couple on the Squamish waterfront, SimplyWed Studio"/></div>
-  <div class="inner edge"><div class="maxw" style="width:100%">
-    <span class="label eyebrow">Vancouver Wedding &amp; Elopement Photography</span>
-    <h1>Gentle moments,<br/><em>lasting</em> impressions.</h1>
-    <p>Storytelling photography fueled by passion — for the couples who want their day to feel as real in photos as it did in person.</p>
-    <div class="cta-row">
-      <a class="btn light" href="portfolio.html">View work</a>
-      <a class="btn on-dark" href="contact.html">Book a session</a>
+<!-- MOBILE NAV -->
+<div class="scrim" id="scrim" onclick="closeMenu()"></div>
+<nav class="mnav" id="mnav">
+  <button class="close" aria-label="Close" onclick="closeMenu()">&times;</button>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+  <a href="portfolio.html">Portfolio</a><a href="blog.html">Journal</a><a href="contact.html">Contact</a>
+  <a class="btn btn-cyan" href="contact.html">Book a date</a>
+  <a class="mnav-contact" href="mailto:hello@simplywedstudio.com">hello@simplywedstudio.com</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="padding:0;">
+  <div class="bg">
+    <picture>
+      <!-- Art direction, not just resizing: the landscape frame is far wider than a
+           phone hero box, so cover() scales by height and object-position has no
+           vertical travel at all. The portrait cut lifts the couple into the top 45%,
+           clear of the headline. -->
+      <source media="(max-width:600px)" srcset="images/nc-hero-pittlake-mobile.jpg">
+      <img src="images/nc-hero-pittlake.jpg" alt="Couple at Pitt Lake with the mountains mirrored behind them">
+    </picture>
+  </div>
+  <div class="veil"></div>
+  <div class="inner"><div class="wrap">
+    <span class="eyebrow on-dark">Vancouver &amp; Sea-to-Sky</span>
+    <h1>Gentle moments,<br><em>lasting</em> impressions.</h1>
+    <div class="hero-row">
+      <p>Wedding &amp; elopement photography for couples who want their day to feel as real in the gallery as it did in person.</p>
+      <div class="hero-cta">
+        <a class="btn btn-cyan" href="portfolio.html">View the work</a>
+        <a class="btn btn-ghost-dark" href="contact.html">Enquire</a>
+      </div>
     </div>
   </div></div>
 </section>
 
-<!-- ============ INTRO ============ -->
-<section class="intro edge"><div class="maxw grid">
-  <p class="lead">We photograph Vancouver weddings &amp; elopements the way they <em>actually felt</em> — candid, light-filled, and true. Calm on the day, unforgettable in the gallery.</p>
-</div></section>
+<!-- INTRO -->
+<section class="intro"><div class="wrap"><div class="grid" data-rv>
+  <p class="lead">We photograph the way the day <span class="italic-cyan">actually felt.</span> Candid, light-filled, unhurried. Calm on the day, unforgettable in the gallery.</p>
+  <div class="stat"><div class="n">140+</div><div class="l">days documented</div></div>
+</div></div></section>
 
-<!-- ============ WORK / CATEGORIES ============ -->
-<section class="work section edge" style="padding-top:0"><div class="maxw">
-  <div class="head">
-    <h2 class="section-head" style="font-size:clamp(2.2rem,5vw,4rem)">Our work</h2>
-    <span class="label">Engagement · Proposal · Wedding</span>
+<!-- SELECTED WORK -->
+<section class="work"><div class="wrap">
+  <div class="head" data-rv>
+    <h2>Selected work</h2>
+    <span class="meta">Weddings · Elopements · Engagements</span>
   </div>
-  <div class="cats">
-    <a class="cat" href="portfolio.html"><img src="images/eng-card.jpg" alt="Engagement photography Vancouver — SimplyWed Studio"/><span class="t"><span class="label">Gallery</span><h3>Engagement</h3></span></a>
-    <a class="cat" href="portfolio.html"><img src="images/prop-field.jpg" alt="Proposal photography Vancouver — SimplyWed Studio"/><span class="t"><span class="label">Gallery</span><h3>Proposal</h3></span></a>
-    <a class="cat" href="portfolio.html"><img src="images/wed-card.jpg" alt="Wedding photography Vancouver — SimplyWed Studio"/><span class="t"><span class="label">Gallery</span><h3>Wedding</h3></span></a>
+  <div class="cards">
+    <a class="wcard" href="portfolio.html" data-rv>
+      <img src="images/nc-wed-toast.jpg" alt="Bride and groom with a glass each after the ceremony" style="object-position:center 100%;">
+      <div class="scr"></div><div class="cap"><div class="eb">01 — Gallery</div><div class="t">Weddings</div></div>
+    </a>
+    <a class="wcard" href="portfolio.html" data-rv>
+      <img src="images/nc-elo-siwash.jpg" alt="Couple alone at the base of Siwash Rock at dusk" style="object-position:center 60%;">
+      <div class="scr"></div><div class="cap"><div class="eb">02 — Gallery</div><div class="t">Elopements</div></div>
+    </a>
+    <a class="wcard" href="portfolio.html" data-rv>
+      <img src="images/nc-eng-laugh.jpg" alt="Engaged couple caught mid laugh" style="object-position:center 1%;">
+      <div class="scr"></div><div class="cap"><div class="eb">03 — Gallery</div><div class="t">Engagements</div></div>
+    </a>
   </div>
-  <div class="more"><a class="btn ghost" href="portfolio.html">View full portfolio</a></div>
 </div></section>
 
-<!-- ============ QUICK LINKS STRIP ============ -->
-<section class="strip"><div class="maxw grid edge" style="padding-inline:0">
-  <a href="portfolio.html" class="edge"><span class="k">Portfolio</span><span class="go">View →</span></a>
-  <a href="services.html" class="edge"><span class="k">Pricing &amp; Packages</span><span class="go">View →</span></a>
-  <a href="contact.html" class="edge"><span class="k">Contact</span><span class="go">View →</span></a>
-</div></section>
-
-<!-- ============ CLOSER ============ -->
-<section class="closer"><div class="grid maxw" style="max-width:none">
-  <div class="tx">
-    <span class="label eyebrow">Book your session</span>
-    <h2>Ready to turn moments into <em>timeless memories?</em></h2>
-    <p>Whether you have a date locked in or you're still dreaming — reach out. We'll help you figure out what coverage makes sense.</p>
-    <a class="btn light" href="contact.html">Get in touch</a>
+<!-- ABOUT -->
+<section class="about"><div class="wrap"><div class="grid">
+  <div class="portrait" data-rv><img src="images/dave.jpg" alt="Dave, photographer at SimplyWed Studio" style="object-position:center 0%;"></div>
+  <div data-rv>
+    <span class="eyebrow">The person behind the camera</span>
+    <h2>Hi, I'm Dave.</h2>
+    <p>I've shot weddings and elopements across BC for the better part of a decade. Mountaintop ceremonies, downtown ballrooms, and a lot of quiet moments in between.</p>
+    <p>My job is to be calm and unobtrusive enough that you forget I'm there. What you get back are photos that feel lived-in, not staged.</p>
+    <a class="btn btn-ghost-light" href="about.html">Read the full story</a>
   </div>
-  <div class="ph"><img src="images/elope-epic.jpg" alt="Squamish elopement, SimplyWed Studio"/></div>
+</div></div></section>
+
+<!-- INSTAGRAM -->
+<section class="feed"><div class="wrap">
+  <div class="head" data-rv>
+    <div><span class="eyebrow">@simplywedstudio</span><h2 style="margin-top:14px;">From the feed</h2></div>
+    <a href="https://www.instagram.com/simplywedstudio" class="btn btn-ghost-light">Follow along →</a>
+  </div>
+</div>
+<!-- Full-bleed strip. Swap these for the live Cloudinary/Instagram feed when ready. -->
+<div class="hscroll strip" style="gap:14px;padding:0 clamp(24px,4vw,64px);">
+  <a class="imgzoom" href="https://www.instagram.com/simplywedstudio"><img src="images/sn-summer-golden-bench.jpg" alt="" style="object-position:center 100%;"></a>
+  <a class="imgzoom" href="https://www.instagram.com/simplywedstudio"><img src="images/wy-embrace-rocks.jpg" alt="" style="object-position:center 50%;"></a>
+  <a class="imgzoom" href="https://www.instagram.com/simplywedstudio"><img src="images/sr-hand-on-face.jpg" alt="" style="object-position:center 81%;"></a>
+  <a class="imgzoom" href="https://www.instagram.com/simplywedstudio"><img src="images/cy-seawall.jpg" alt="" style="object-position:center 1%;"></a>
+  <a class="imgzoom" href="https://www.instagram.com/simplywedstudio"><img src="images/lj-seated-laugh.jpg" alt="" style="object-position:center 1%;"></a>
+  <a class="imgzoom" href="https://www.instagram.com/simplywedstudio"><img src="images/vj-veil-ivy.jpg" alt="" style="object-position:center 47%;"></a>
+</div>
+</section>
+
+<!-- CLOSER -->
+<section class="closer on-dark"><div class="grid">
+  <div class="txt" data-rv>
+    <span class="eyebrow on-dark">Now booking 2026 &amp; 2027</span>
+    <h2>Let's turn your day into <span class="italic-cyan">something lasting.</span></h2>
+    <p>Date locked in or still dreaming, tell me a little about it and I'll come back with what makes sense.</p>
+    <div><a class="btn btn-cyan" href="contact.html">Start a conversation</a></div>
+  </div>
+  <div class="img"><img src="images/ab-marsh-portrait.jpg" alt="Bride and groom looking at each other beside the marsh" style="object-position:50% center;"></div>
 </div></section>
 
-<!-- ============ FOOTER ============ -->
-<footer class="site-footer edge"><div class="maxw">
-  <div class="foot-grid">
-    <div>
-      <a class="brand" href="index.html"><img src="logo-wordmark-light.png" alt="SimplyWed Studio"/></a>
+<!-- FOOTER -->
+<footer class="site-footer"><div class="wrap">
+  <div class="cols">
+    <div class="fw">
+      <img src="assets/logo-wordmark-light.png" alt="SimplyWed Studio">
       <p>Wedding &amp; elopement photography in Vancouver, BC. Storytelling fueled by passion.</p>
     </div>
-    <div>
-      <h4>Navigate</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li>
-      </ul>
+    <div class="fcol"><h4>Navigate</h4>
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a><a href="blog.html">Journal</a><a href="contact.html">Contact</a>
     </div>
-    <div class="connect">
-      <h4>Connect</h4>
-      <ul>
-        <li><a href="https://www.instagram.com/simplywedstudio" target="_blank" rel="noopener">Instagram — @simplywedstudio</a></li>
-        <li><a href="mailto:dave@sowedding.ca">dave@sowedding.ca</a></li>
-        <li><a href="contact.html">Book a session →</a></li>
-      </ul>
+    <div class="fcol"><h4>Connect</h4>
+      <a href="https://www.instagram.com/simplywedstudio">@simplywedstudio</a>
+      <a href="mailto:hello@simplywedstudio.com">hello@simplywedstudio.com</a>
+      <a href="contact.html">Book a session →</a>
     </div>
   </div>
-  <div class="copyright">© 2026 SimplyWed Studio. All rights reserved. &nbsp;·&nbsp; Vancouver, BC · Canada</div>
+  <div class="copyright">© 2026 SimplyWed Studio · Vancouver, BC · Canada</div>
 </div></footer>
 
+<script>
+function openMenu(){document.getElementById('mnav').classList.add('open');document.getElementById('scrim').classList.add('open');}
+function closeMenu(){document.getElementById('mnav').classList.remove('open');document.getElementById('scrim').classList.remove('open');}
+</script>
 </body>
 </html>

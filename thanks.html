@@ -1,14 +1,62 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Thank you | SimplyWed Studio</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300;0,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css"/>
-<style>.wrap{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px}
-.wrap img{height:52px;width:auto;margin-bottom:30px}.wrap h1{font-family:'Fraunces';font-weight:300;font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:16px}
-.wrap h1 em{font-style:italic;color:var(--aqua-deep)}.wrap p{color:var(--ink-soft);max-width:44ch;margin-bottom:30px}</style>
-</head><body><div class="wrap">
-<img src="logo-wordmark.png" alt="SimplyWed Studio"/>
-<h1>Thank you — <em>message received.</em></h1>
-<p>We'll be in touch soon about your day. In the meantime, feel free to follow along on Instagram.</p>
-<a class="btn" href="index.html">Back to home</a>
-</div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18493262020"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18493262020');
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank you — SimplyWed Studio</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  body{background:var(--ink-deep);}
+  .ty{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:40px 24px;}
+  .ty .bg{position:absolute;inset:0;z-index:0;}
+  .ty .bg img{width:100%;height:100%;object-fit:cover;object-position:center 35%;opacity:.30;}
+  .ty .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(24,26,29,.6),rgba(24,26,29,.85));}
+  .card{position:relative;z-index:2;max-width:560px;text-align:center;color:#fff;}
+  .check{width:64px;height:64px;border-radius:50%;background:var(--cyan);display:inline-flex;align-items:center;justify-content:center;margin-bottom:26px;}
+  .check svg{width:30px;height:30px;}
+  .ty .eyebrow{color:var(--cyan);justify-content:center;margin-bottom:16px;}
+  .ty h1{font-family:'Fraunces',serif;font-weight:200;font-size:clamp(38px,5.4vw,58px);line-height:1.05;letter-spacing:-.025em;}
+  .ty h1 em{font-weight:300;font-style:italic;color:var(--cyan);}
+  .ty p{color:var(--muted);font-size:17px;line-height:1.7;margin:22px auto 0;max-width:440px;}
+  .ty p b{color:#fff;font-weight:500;}
+  .actions{margin-top:34px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+  .wm{margin-top:52px;}
+  .wm img{height:46px;width:auto;display:inline-block;}
+  .wm small{display:block;font:500 9px 'Jost';letter-spacing:3px;text-transform:uppercase;color:#9A9CA3;margin-top:10px;}
+  .socials{margin-top:16px;}
+  .socials a{font:500 10px 'Jost';letter-spacing:1.5px;text-transform:uppercase;color:var(--cyan);}
+</style>
+</head>
+<body>
+<section class="ty">
+  <div class="bg"><img src="images/pl-veil-wind.jpg" alt=""></div>
+  <div class="card">
+    <span class="check" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M4 12.5l5 5 11-11" stroke="#10262B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+    <div class="eyebrow noline">Enquiry received</div>
+    <h1>Thank you. It's <em>in my inbox.</em></h1>
+    <p>Your enquiry landed safely at <b>hello@simplywedstudio.com</b>. I read every one myself and reply within 24 hours. If you don't hear back, check your spam folder or email me directly.</p>
+    <div class="actions">
+      <a class="btn btn-cyan" href="index.html">Back to home</a>
+      <a class="btn btn-ghost-dark" href="portfolio.html">View the portfolio</a>
+    </div>
+    <div class="socials"><a href="https://www.instagram.com/simplywedstudio">Follow along @simplywedstudio →</a></div>
+    <div class="wm"><img src="assets/logo-wordmark-light.png" alt="SimplyWed Studio"><small>Photo &amp; Content Creation</small></div>
+  </div>
+</section>
+</body>
+</html>

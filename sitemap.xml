@@ -1,15 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://simplywedstudio.com/</loc><lastmod>2026-07-04</lastmod><priority>1.0</priority></url>
-  <url><loc>https://simplywedstudio.com/about.html</loc><lastmod>2026-07-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://simplywedstudio.com/services.html</loc><lastmod>2026-07-04</lastmod><priority>0.9</priority></url>
-  <url><loc>https://simplywedstudio.com/portfolio.html</loc><lastmod>2026-07-04</lastmod><priority>0.9</priority></url>
-  <url><loc>https://simplywedstudio.com/blog.html</loc><lastmod>2026-07-04</lastmod><priority>0.8</priority></url>
-  <url><loc>https://simplywedstudio.com/contact.html</loc><lastmod>2026-07-04</lastmod><priority>0.8</priority></url>
-  <url><loc>https://simplywedstudio.com/blog/how-to-plan-a-vancouver-elopement.html</loc><lastmod>2026-07-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://simplywedstudio.com/blog/the-best-elopement-locations-in-vancouver.html</loc><lastmod>2026-07-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://simplywedstudio.com/blog/why-couples-are-choosing-elopements.html</loc><lastmod>2026-07-12</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://simplywedstudio.com/portfolio.html</loc><priority>0.9</priority></url>
+  <url><loc>https://simplywedstudio.com/services.html</loc><priority>0.9</priority></url>
+  <url><loc>https://simplywedstudio.com/contact.html</loc><priority>0.9</priority></url>
+  <url><loc>https://simplywedstudio.com/about.html</loc><priority>0.8</priority></url>
+  <url><loc>https://simplywedstudio.com/blog.html</loc><priority>0.8</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/a-city-to-sea-vancouver-engagement.html</loc><lastmod>2026-07-30</lastmod><priority>0.7</priority></url>
   <url><loc>https://simplywedstudio.com/blog/best-time-of-year-to-get-married-in-vancouver.html</loc><lastmod>2026-07-12</lastmod><priority>0.7</priority></url>
   <url><loc>https://simplywedstudio.com/blog/best-vancouver-venues-for-intimate-weddings.html</loc><lastmod>2026-07-12</lastmod><priority>0.7</priority></url>
   <url><loc>https://simplywedstudio.com/blog/fairmont-hotel-vancouver-wedding.html</loc><lastmod>2026-07-12</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/fairmont-pacific-rim-wedding.html</loc><lastmod>2026-08-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/hart-house-restaurant-wedding-burnaby.html</loc><lastmod>2026-09-01</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/how-to-plan-a-vancouver-elopement.html</loc><lastmod>2026-07-12</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/not-photo-people-camera-shy-couples.html</loc><lastmod>2026-08-01</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/north-vancouver-rooftop-wedding.html</loc><lastmod>2026-08-25</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/polygon-gallery-wedding-north-vancouver.html</loc><lastmod>2026-08-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/ubc-boathouse-wedding-richmond.html</loc><lastmod>2026-09-08</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/the-best-elopement-locations-in-vancouver.html</loc><lastmod>2026-07-12</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/vancouver-wedding-cost-2026.html</loc><lastmod>2026-08-01</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/west-vancouver-oceanside-engagement.html</loc><lastmod>2026-07-30</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/why-couples-are-choosing-elopements.html</loc><lastmod>2026-07-12</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/rainy-wedding-day-vancouver.html</loc><lastmod>2026-09-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/engagement-photo-outfits-that-age-well.html</loc><lastmod>2026-09-22</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/first-look-vs-aisle-reveal.html</loc><lastmod>2026-09-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/wedding-content-creator-vancouver.html</loc><lastmod>2026-10-06</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/how-many-hours-of-wedding-photography.html</loc><lastmod>2026-10-13</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/small-wedding-vancouver-30-guests.html</loc><lastmod>2026-10-13</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/engagement-photo-locations-vancouver.html</loc><lastmod>2026-10-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/documentary-vs-posed-wedding-photography.html</loc><lastmod>2026-10-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/hycroft-manor-wedding-vancouver-snow.html</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/hycroft-manor-terrace-ceremony-wedding.html</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/oceanfront-garden-tent-wedding-vancouver.html</loc><lastmod>2026-10-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/nitobe-garden-wedding-ubc-vancouver.html</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/greek-orthodox-wedding-vancouver.html</loc><lastmod>2026-10-30</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/roundhouse-wedding-yaletown-vancouver.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/wedding-day-timeline-vancouver.html</loc><lastmod>2026-11-03</lastmod><priority>0.7</priority></url>
+  <url><loc>https://simplywedstudio.com/blog/how-to-choose-a-wedding-photographer-vancouver.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
 </urlset>
