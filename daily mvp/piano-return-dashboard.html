@@ -75,6 +75,11 @@ label.f{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--mu
 .routine b{font-variant-numeric:tabular-nums;color:var(--accent)}
 .ci{border-top:1px solid var(--line);padding:8px 0;font-size:14px}
 .status-line{font-size:12px;color:var(--muted)}
+details{margin-top:10px;font-size:14px}
+details summary{cursor:pointer;font-weight:600}
+details ol{margin:8px 0 0;padding-left:20px}
+.sched{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:14px;margin-bottom:10px}
+.sched b{color:var(--accent)}
 .empty{color:var(--muted);font-size:14px}
 @media (prefers-reduced-motion:no-preference){.bar i,.key .fill{transition:all .3s}}
 </style>
@@ -162,6 +167,34 @@ label.f{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--mu
         <h2>Harmony, 10 min twice a week</h2>
         <div id="harmony"></div>
       </div>
+
+      <div class="card">
+        <h2>Listening and analysis</h2>
+        <div class="sched">
+          <b>Mon</b><span>Listen to a piece you're learning (no score)</span>
+          <b>Wed</b><span>Listen again with the score</span>
+          <b>Fri</b><span>Analyze one excerpt, in two or three lines</span>
+          <b>Sun</b><span>Free listening outside your pieces</span>
+        </div>
+        <div id="listen"></div>
+        <details>
+          <summary>5 questions for any excerpt</summary>
+          <ol>
+            <li>Form: where does the theme start, return and change?</li>
+            <li>Harmony: first and last chords? Where is the tension and the relief?</li>
+            <li>Texture: what does the left hand do, and how do the hands share the work?</li>
+            <li>Dynamics and pedal: where are the peaks, and where does the sound open or thin?</li>
+            <li>Your choice: what would you do differently, and why?</li>
+          </ol>
+        </details>
+        <div class="row" style="margin-top:12px">
+          <label class="f" style="flex:1 1 160px">Piece or excerpt<input id="lsPiece" placeholder="e.g. Pathétique, Adagio"></label>
+        </div>
+        <label class="f" style="margin-top:8px">What you heard<textarea id="lsNote"></textarea></label>
+        <div class="row" style="margin-top:10px"><button class="primary" id="lsSave">Save listening note</button></div>
+        <div id="lsList" style="margin-top:10px"></div>
+        <p class="note" style="margin-top:8px">Compare pianists: for Chopin nocturnes try Rubinstein, Pires and Ashkenazy; for the Pathétique, Barenboim, Kempff and Gilels. Check what's available on your streaming service.</p>
+      </div>
     </div>
   </section>
 </div>
@@ -238,7 +271,16 @@ var HARM=[
  'Label the chords in one complete piece you play'
 ];
 
-var S={s:{},log:{},t:{},custom:[],ci:[],start:''};
+var LISTEN=[
+ "Pathétique, 2nd mvt: opening theme (rondo form, steady inner motion)",
+ "Pathétique, 1st mvt: Grave introduction and its return",
+ "Nocturne Op. 9 No. 2: how the theme returns with more ornament, and the chords under the left hand",
+ "Zimmer, Time: a repeating pattern that grows by layers",
+ "Hisaishi, Summer: a simple melody, reharmonized",
+ "Compare three pianists on the same nocturne passage (rubato, pedal, balance)",
+ "Compare two tempos for the Pathétique Adagio"
+];
+var S={s:{},log:{},t:{},custom:[],ci:[],start:'',listen:[]};
 var dirty=false,writing=false,again=false,timer=null,db=null,ref=null,uid=null;
 var fTrack='all',fStatus='all';
 var KEY='piano-return-v1';
@@ -249,7 +291,7 @@ function ds(d){var y=d.getFullYear(),m=('0'+(d.getMonth()+1)).slice(-2),dd=('0'+
 function today(){return ds(new Date())}
 function norm(o){
   o=o||{};
-  return {s:o.s||{},log:o.log||{},t:o.t||{},custom:o.custom||[],ci:o.ci||[],start:o.start||''};
+  return {s:o.s||{},log:o.log||{},t:o.t||{},custom:o.custom||[],ci:o.ci||[],start:o.start||'',listen:o.listen||[]};
 }
 function setStatusLine(t){$('saveStatus').textContent=t}
 
@@ -396,8 +438,22 @@ function renderCI(){
   var last=S.ci[S.ci.length-1];
   $('ciWarn').innerHTML=(last&&last.tension>=3)?'<div class="warnbox">You reported tension or pain. Rest today, shorten sessions to 15 minutes, and see a physio if it lasts more than a few days.</div>':'';
 }
+function renderListen(){
+  var h='';
+  LISTEN.forEach(function(t,i){
+    var id='l'+i;
+    h+='<label class="task"><input type="checkbox" data-t="'+id+'"'+(S.t[id]?' checked':'')+'><span>'+esc(t)+'</span></label>';
+  });
+  $('listen').innerHTML=h;
+  if(!S.listen.length){$('lsList').innerHTML='<p class="empty">No listening notes yet.</p>';return}
+  var out='';
+  S.listen.slice(-3).reverse().forEach(function(c){
+    out+='<div class="ci"><b>'+esc(c.d)+'</b>'+(c.p?' · '+esc(c.p):'')+(c.n?'<br><span class="note">'+esc(c.n)+'</span>':'')+'</div>';
+  });
+  $('lsList').innerHTML=out;
+}
 function renderAll(){
-  renderTiles();renderKeys();renderFilters();renderPieces();renderRoad();renderHarm();renderCI();
+  renderTiles();renderKeys();renderFilters();renderPieces();renderRoad();renderHarm();renderListen();renderCI();
   $('startDate').value=S.start||'';
   var sel=$('addTrack');
   if(!sel.options.length){
@@ -438,6 +494,14 @@ $('addForm').onsubmit=function(e){
   S.custom.push({id:'u'+Date.now(),title:t,composer:$('addComposer').value.trim()});
   $('addTitle').value='';$('addComposer').value='';
   save();renderTiles();renderPieces();
+};
+$('lsSave').onclick=function(){
+  var p=$('lsPiece').value.trim().slice(0,120),n=$('lsNote').value.trim().slice(0,400);
+  if(!p&&!n)return;
+  S.listen.push({d:today(),p:p,n:n});
+  if(S.listen.length>40)S.listen=S.listen.slice(-40);
+  $('lsPiece').value='';$('lsNote').value='';
+  save();renderListen();
 };
 $('ciSave').onclick=function(){
   S.ci.push({d:today(),tension:parseInt($('ciTension').value,10),mood:$('ciMood').value,note:$('ciNote').value.trim().slice(0,300)});

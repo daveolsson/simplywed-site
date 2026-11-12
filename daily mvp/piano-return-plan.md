@@ -28,3 +28,11 @@ Label chords in the pieces you play; I-IV-V and V7 in Op. 9 No. 2; the middle-se
 
 ## Tips
 Left hand first in nocturnes. Practice slowly. Loose wrist for tremolo octaves; stop at any tension. Use headphones and a real (half-pedal) sustain pedal. Record yourself weekly.
+
+## Listening and analysis
+- Mon: listen to a piece you are learning, no score. Wed: listen again with the score. Fri: analyze one excerpt in two or three lines. Sun: free listening.
+- Five questions for any excerpt: form, harmony, texture, dynamics and pedal, your own choice.
+- First excerpts: Pathetique 2nd mvt opening theme; Pathetique 1st mvt Grave and its return; Nocturne Op. 9 No. 2 (returning theme, chords under the left hand); Zimmer Time (layers); Hisaishi Summer (reharmonized melody).
+- Compare pianists: Rubinstein, Pires, Ashkenazy (nocturnes); Barenboim, Kempff, Gilels (Pathetique). Check what is available on your streaming service.
+- Ear-training warm-ups (5 min): sing a bass line, pick out a melody by ear, name cadences, hum the melody over the left hand.
+- The dashboard has a Listening and analysis card with these excerpts and a notes log.
