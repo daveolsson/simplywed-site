@@ -1,6 +1,6 @@
 {
   "_comment": "SimplyWed Instagram publish queue — APPEND-ONLY. Make scenario 5976260 fetches this file at 9am & 5pm America/Vancouver, publishes posts[cursor] (1-based), and advances a cursor held in a Make Data Store. RULES: (1) only APPEND new posts to the end — never reorder or delete existing entries, or the cursor misaligns. (2) Each post's 'files' is the exact array the Instagram carousel module needs (cover first, 2-10 frames). (3) 'post_at' is an optional ISO-UTC date-pin that HOLDS a post until that time; omit it to let the cursor pace posts at 2/day. (4) 'status'/'published_at' are human bookkeeping — the Data Store cursor is the source of truth for what has posted.",
-  "updated": "2026-11-12",
+  "updated": "2026-11-14",
   "cursor_note": "Data Store 'cursor' = next 1-based index to publish. Pilots occupy 1-3 (published 2026-11-12), so cursor starts at 4.",
   "posts": [
     {
@@ -16,15 +16,42 @@
       "caption": "Your photographer is the one vendor you can't re-do. The cake gets eaten, the flowers wilt — the photos are what's left. So vet them like it matters.\n\nSeven questions that go past the portfolio: can I see a full gallery, not the highlight reel? What's your backup if you get sick? How are the files protected? When do I get them? Is there a second shooter — and who? What does the contract actually cover? Do I get everything?\n\nThe honest one hides under all of them: do I feel like myself around you? That's what shows up in the photos. Full guide on the journal — link in bio. 🤍",
       "tags": "#vancouverweddingphotographer #vancouverwedding #weddingplanning #bcwedding #yvrwedding #engagedvancouver #2027bride #weddingadvice #vancouverbride #howtochooseaphotographer #candidweddingphotography #simplywedstudio",
       "files": [
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/guide_1.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/guide_2.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/guide_3.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/guide_4.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/guide_5.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/guide_6.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/guide_7.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/guide_8.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/guide_9.jpg"}
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/guide_1.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/guide_2.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/guide_3.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/guide_4.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/guide_5.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/guide_6.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/guide_7.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/guide_8.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/guide_9.jpg"
+        }
       ]
     },
     {
@@ -36,19 +63,44 @@
       "status": "Published",
       "post_at": "2026-11-12T10:02:00Z",
       "published_at": "2026-11-12",
-      "blog": "/blog/fairmont-hotel-vancouver-wedding.html",
+      "blog": "",
       "caption": "Marble, gold, and a wall of orchids. The Fairmont Hotel Vancouver doesn't need much help looking like a wedding — the room does half the work, the light does the rest.\n\nJayleen & Ryan went full black-tie: a gilded ballroom, a staircase made for a dress, the kind of timeless that doesn't date. If you want your day elevated without trying too hard, there isn't a more beautiful ballroom in the city.\n\n📍 Fairmont Hotel Vancouver · Full wedding on the journal — link in bio.",
       "tags": "#fairmonthotelvancouver #vancouverwedding #luxurywedding #ballroomwedding #vancouverweddingphotographer #blacktiewedding #bcwedding #yvrwedding #vancouverbride #weddingvenue #downtownvancouver #2027bride #simplywedstudio",
       "files": [
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/venue_1.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/venue_2.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/venue_3.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/venue_4.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/venue_5.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/venue_6.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/venue_7.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/venue_8.jpg"}
-      ]
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/venue_1.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/venue_2.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/venue_3.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/venue_4.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/venue_5.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/venue_6.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/venue_7.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/venue_8.jpg"
+        }
+      ],
+      "note": "RETRACTED 2026-11-12 — venue misidentified. Shot at Rosewood Hotel Georgia, not the Fairmont Hotel Vancouver. Blog post pulled. This carousel published to Instagram on 2026-11-12 with the wrong venue in the caption and hashtag and must be deleted by hand. Entry kept in place so the Make cursor stays aligned — do not delete it."
     },
     {
       "id": "hottake-not-photo-people",
@@ -63,16 +115,98 @@
       "caption": "\"We're not really photo people.\" We hear it on every first call — and honestly? Good.\n\nThe couples who think they're awkward end up with the realest photos. The stiffness isn't you, it's being told to \"just act natural\" while someone points a lens at your face. So we don't pose you. We give you something to do and someone to look at, and we disappear. The first ten minutes feel weird for everyone. Then you forget we're there — and that's where the good ones live.\n\nYou don't have to be photogenic. You just have to show up. How we direct camera-shy couples — full post on the journal, link in bio.",
       "tags": "#notphotopeople #camerashy #candidweddingphotography #unposedwedding #vancouverweddingphotographer #documentaryweddingphotography #bcwedding #yvrwedding #engagedvancouver #vancouverbride #realmoments #simplywedstudio",
       "files": [
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/hottake_1.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/hottake_2.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/hottake_3.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/hottake_4.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/hottake_5.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/hottake_6.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/hottake_7.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/hottake_8.jpg"},
-        {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/hottake_9.jpg"}
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/hottake_1.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/hottake_2.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/hottake_3.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/hottake_4.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/hottake_5.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/hottake_6.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/hottake_7.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/hottake_8.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://raw.githubusercontent.com/daveolsson/simplywed-site/main/ig/hottake_9.jpg"
+        }
       ]
+    },
+    {
+      "id": "couple-sara-vincent-garden",
+      "index": 4,
+      "title": "Sara & Vincent — a garden, a short list",
+      "pillar": "Wedding",
+      "platform": "Instagram Feed",
+      "status": "Staged",
+      "published_at": null,
+      "blog": "",
+      "caption": "A Japanese garden, a short guest list, and a cake you could carry in one hand.\n\nSara and Vincent got married under the maples, about as far from a ballroom as you can get and still be in Vancouver. Moss, a stone bridge, and everyone close enough to hear the vows without a microphone.\n\nThen ten minutes down the hill for portraits against glass and water. Same city, completely different room.\n\nSmall is not the same as less.",
+      "tags": "#weddingphotography #weddingday #documentarywedding #weddingmoments #weddingstorytelling #candidmoments #authenticwedding #candidweddingphotography #documentaryweddingphotography #unposedwedding #intimatewedding #vancouverweddingphotographer #vancouverwedding #bcweddingphotographer #simplywedstudio",
+      "files": [
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv_1.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv_2.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv_3.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv_4.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv_5.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv_6.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv_7.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv_8.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv_9.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv_10.jpg"
+        }
+      ],
+      "note": "Staged 2026-11-14. Approved copy from ig-carousels/carousel-queue.md (NEXT UP). No venue named. Scenario 5976260 is INACTIVE, so nothing publishes until Dave turns it on. Cursor is at 4, so this is the next post out."
     }
   ]
 }
