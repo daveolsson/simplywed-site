@@ -1,6 +1,6 @@
 {
-  "_comment": "SimplyWed Instagram publish queue — APPEND-ONLY. Make scenario 5976260 fetches this file at 9am & 5pm America/Vancouver, publishes posts[cursor] (1-based), and advances a cursor held in a Make Data Store. RULES: (1) only APPEND new posts to the end — never reorder or delete existing entries, or the cursor misaligns. (2) Each post's 'files' is the exact array the Instagram carousel module needs (cover first, 2-10 frames). (3) 'post_at' is an optional ISO-UTC date-pin that HOLDS a post until that time; omit it to let the cursor pace posts at 2/day. (4) 'status'/'published_at' are human bookkeeping — the Data Store cursor is the source of truth for what has posted.",
-  "updated": "2026-11-14",
+  "_comment": "SimplyWed Instagram publish queue — APPEND-ONLY. Make scenario 5976260 fetches this file once a day (20:00 UTC), publishes posts[cursor] (1-based), and advances a cursor held in a Make Data Store. RULES: (1) only APPEND new posts to the end — never reorder or delete existing entries, or the cursor misaligns. (2) Each post's 'files' is the exact array the Instagram carousel module needs (cover first, 2-10 frames). (3) 'post_at' is an optional ISO-UTC date-pin that HOLDS a post until that time; omit it to let the cursor pace posts at 1/day (Dave, 2026-11-15). (4) 'status'/'published_at' are human bookkeeping — the Data Store cursor is the source of truth for what has posted.",
+  "updated": "2026-11-15",
   "cursor_note": "Data Store 'cursor' = next 1-based index to publish. Pilots occupy 1-3 (published 2026-11-12), so cursor starts at 4.",
   "posts": [
     {
@@ -167,46 +167,42 @@
       "files": [
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv_1.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv2_1.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv_2.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv2_2.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv_3.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv2_3.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv_4.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv2_4.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv_5.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv2_5.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv_6.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv2_6.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv_7.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv2_7.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv_8.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv2_8.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv_9.jpg"
-        },
-        {
-          "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv_10.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv2_9.jpg"
         }
       ],
-      "note": "Staged 2026-11-14. Approved copy from ig-carousels/carousel-queue.md (NEXT UP). No venue named. Scenario 5976260 is INACTIVE, so nothing publishes until Dave turns it on. Cursor is at 4, so this is the next post out."
+      "note": "Rebuilt 2026-11-15 in the @sowedding mixed-layout format (nov_sv2_1..9): full-bleed heroes interleaved with one 2-up garden stack, one 2x2 detail quad and two matted tiles. REPLACES nov_sv_1..10, whose slide 10 was a kiss (brass elevator) and broke the standing no-kiss rule. 9 frames, all verified 200. Scenario 5976260 is INACTIVE so nothing publishes until Dave switches it on."
     }
   ]
 }
