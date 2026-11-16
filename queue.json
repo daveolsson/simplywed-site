@@ -167,7 +167,7 @@
       "files": [
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv2_1.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv2_4.jpg"
         },
         {
           "media_type": "IMAGE",
@@ -179,7 +179,7 @@
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv2_4.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv2_1.jpg"
         },
         {
           "media_type": "IMAGE",
@@ -202,7 +202,7 @@
           "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_sv2_9.jpg"
         }
       ],
-      "note": "Rebuilt 2026-11-15 in the @sowedding mixed-layout format (nov_sv2_1..9): full-bleed heroes interleaved with one 2-up garden stack, one 2x2 detail quad and two matted tiles. REPLACES nov_sv_1..10, whose slide 10 was a kiss (brass elevator) and broke the standing no-kiss rule. 9 frames, all verified 200. Scenario 5976260 is INACTIVE so nothing publishes until Dave switches it on."
+      "note": "Rebuilt 2026-11-15 in the @sowedding mixed-layout format (nov_sv2_1..9): full-bleed heroes interleaved with one 2-up garden stack, one 2x2 detail quad and two matted tiles. REPLACES nov_sv_1..10, whose slide 10 was a kiss (brass elevator) and broke the standing no-kiss rule. 9 frames, all verified 200. Scenario 5976260 is INACTIVE so nothing publishes until Dave switches it on. 2026-11-15: cover switched to the pond frame (nov_sv2_4 first; recessional now slide 4)."
     }
   ]
 }
