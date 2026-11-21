@@ -1,6 +1,6 @@
 {
-  "_comment": "SimplyWed Instagram publish queue — APPEND-ONLY. Make scenario 5976260 fetches this file once a day (20:00 UTC), publishes posts[cursor] (1-based), and advances a cursor held in a Make Data Store. RULES: (1) only APPEND new posts to the end — never reorder or delete existing entries, or the cursor misaligns. (2) Each post's 'files' is the exact array the Instagram carousel module needs (cover first, 2-10 frames). (3) 'post_at' is an optional ISO-UTC date-pin that HOLDS a post until that time; omit it to let the cursor pace posts at 1/day (Dave, 2026-11-15). (4) 'status'/'published_at' are human bookkeeping — the Data Store cursor is the source of truth for what has posted.",
-  "updated": "2026-11-18",
+  "_comment": "APPEND-ONLY. Make 5976260 runs daily 20:00-20:30 (Make org time) and publishes posts[cursor] only once its post_at has passed; cursor (Data Store 199639) then +1. One post per day: post_at = that day at 00:00 Vancouver (08:00Z). Leave Wednesdays empty for Dave's reels. Single-image posts (1 file) go to CreatePostPhoto, 2+ files to CreateCarouselPhoto.",
+  "updated": "2026-11-21",
   "cursor_note": "Data Store 'cursor' = next 1-based index to publish. Pilots occupy 1-3 (published 2026-11-12), so cursor starts at 4.",
   "posts": [
     {
@@ -203,6 +203,277 @@
         }
       ],
       "note": "Rebuilt 2026-11-15 in the @sowedding mixed-layout format (nov_sv2_1..9): full-bleed heroes interleaved with one 2-up garden stack, one 2x2 detail quad and two matted tiles. REPLACES nov_sv_1..10, whose slide 10 was a kiss (brass elevator) and broke the standing no-kiss rule. 9 frames, all verified 200. Scenario 5976260 is INACTIVE so nothing publishes until Dave switches it on. 2026-11-15: cover switched to the pond frame (nov_sv2_4 first; recessional now slide 4). PUBLISHED 2026-11-18 (Vancouver evening) via poster scenario 5975068 on Dave's request ('post something static'); Make cursor bumped to 5."
+    },
+    {
+      "id": "guide-13-content-creator",
+      "index": 5,
+      "title": "Guide · what a wedding content creator does",
+      "pillar": "Educational",
+      "platform": "Instagram Feed",
+      "status": "Scheduled",
+      "post_at": "2026-11-21T08:00:00Z",
+      "published_at": null,
+      "blog": "",
+      "caption": "One person should not shoot your photos and your reels. Here is what a content creator does at a wedding, what the SOCIAL package costs, and who should skip it. Link in bio.",
+      "tags": "#weddingcontentcreator #weddingvideo #weddingreels #vancouverweddingphotographer #vancouverwedding #bcwedding #simplywedstudio",
+      "files": [
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795285546/simplywed-feed/series_13_contentcreator.jpg"
+        }
+      ]
+    },
+    {
+      "id": "guide-14-first-look",
+      "index": 6,
+      "title": "Guide · first look vs aisle reveal",
+      "pillar": "Educational",
+      "platform": "Instagram Feed",
+      "status": "Scheduled",
+      "post_at": "2026-11-22T08:00:00Z",
+      "published_at": null,
+      "blog": "",
+      "caption": "First look or aisle reveal? Both are right for the right couple. What each one buys you, and the middle option nobody mentions, on the journal. Link in bio.",
+      "tags": "#firstlook #weddingplanning #weddingtips #vancouverweddingphotographer #yvrwedding #westcoastbride #simplywedstudio",
+      "files": [
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795285547/simplywed-feed/series_14_firstlook.jpg"
+        }
+      ]
+    },
+    {
+      "id": "couple-heli-proposal-whistler",
+      "index": 7,
+      "title": "The heli proposal above Whistler",
+      "pillar": "Proposal",
+      "platform": "Instagram Feed",
+      "status": "Scheduled",
+      "post_at": "2026-11-23T08:00:00Z",
+      "published_at": null,
+      "blog": "",
+      "caption": "A guitarist was already up there when they landed.\n\nHe had the ring in his jacket from the moment they left the hangar. She thought it was a scenic flight. Then the helicopter set down on a summit above Whistler, the rotors wound down, and somebody started playing.\n\nSnow, one borrowed hour of winter sun, and a yes nobody had to shout.\n\nNot every proposal needs a mountain. This one got one anyway.",
+      "tags": "#heliproposal #whistler #mountainproposal #surpriseproposal #proposalphotographer #shesaidyes #vancouverproposal #vancouverengagement #coastmountains #engaged #bcweddingphotographer #vancouverweddingphotographer #simplywedstudio",
+      "files": [
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_heli2_1.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_heli2_2.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_heli2_3.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_heli2_4.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_heli2_5.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_heli2_6.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_heli2_7.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_heli2_8.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_heli2_9.jpg"
+        }
+      ]
+    },
+    {
+      "id": "guide-12-hours",
+      "index": 8,
+      "title": "Guide · how many hours of coverage",
+      "pillar": "Educational",
+      "platform": "Instagram Feed",
+      "status": "Scheduled",
+      "post_at": "2026-11-24T08:00:00Z",
+      "published_at": null,
+      "blog": "",
+      "caption": "What do 5, 8 and 10 hours of coverage actually get you? And why does adding hours later cost more? Honest answer, with real prices, in the bio link.",
+      "tags": "#weddingphotography #weddingplanning #weddingtips #vancouverweddingphotographer #engagedvancouver #bcwedding #westcoastbride #simplywedstudio",
+      "files": [
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795285548/simplywed-feed/series_12_hours.jpg"
+        }
+      ]
+    },
+    {
+      "id": "couple-belinda-paris-vandusen",
+      "index": 9,
+      "title": "Belinda & Paris at VanDusen",
+      "pillar": "Wedding",
+      "platform": "Instagram Feed",
+      "status": "Scheduled",
+      "post_at": "2026-11-26T08:00:00Z",
+      "published_at": null,
+      "blog": "",
+      "caption": "Two people sat on a bench while their whole wedding party walked past in a blur.\n\nBelinda and Paris got married at VanDusen in September. Stone arches, tall grasses, a veil that caught the wind once and was photographed doing it. Then a doughnut tower instead of a cake, and a toast that got loud.\n\nThe still frames are lovely. The blurry one is the one they will keep.\n\n📍 VanDusen Botanical Garden",
+      "tags": "#vandusengarden #vandusenwedding #gardenwedding #vancouverwedding #vancouverweddingphotographer #documentaryweddingphotography #candidweddingphotography #realwedding #bcweddingphotographer #simplywedstudio",
+      "files": [
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_bp_1.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_bp_2.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_bp_3.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_bp_4.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_bp_5.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_bp_6.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_bp_7.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_bp_8.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_bp_9.jpg"
+        }
+      ]
+    },
+    {
+      "id": "guide-09-documentary-vs-posed",
+      "index": 10,
+      "title": "Guide · documentary vs posed",
+      "pillar": "Educational",
+      "platform": "Instagram Feed",
+      "status": "Scheduled",
+      "post_at": "2026-11-27T08:00:00Z",
+      "published_at": null,
+      "blog": "",
+      "caption": "Candid does not mean we never direct you. It means we direct you into moments and then get out of the way. Where posed still wins, and how to tell what a photographer really shoots, on the journal. Link in bio.",
+      "tags": "#candidweddingphotography #documentaryphotography #weddingtips #vancouverweddingphotographer #vancouverwedding #bcwedding #simplywedstudio",
+      "files": [
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795285550/simplywed-feed/series_09_documentary.jpg"
+        }
+      ]
+    },
+    {
+      "id": "review-shania",
+      "index": 11,
+      "title": "Google review · Shania",
+      "pillar": "Social proof",
+      "platform": "Instagram Feed",
+      "status": "Scheduled",
+      "post_at": "2026-11-28T08:00:00Z",
+      "published_at": null,
+      "blog": "",
+      "caption": "Nobody books a photographer for their personality. And yet.\n\nThank you, Shania, for this one. Every review on our Google profile comes from a real couple, and we read all of them.\n\nWorried you're not photo people? Feeling at ease with whoever's holding the camera is most of the battle.",
+      "tags": "#vancouverweddingphotographer #yvrwedding #westcoastbride #simplywedstudio",
+      "files": [
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795285551/simplywed-feed/review_shania.jpg"
+        }
+      ]
+    },
+    {
+      "id": "guide-15-outfits",
+      "index": 12,
+      "title": "Guide · engagement outfits that age well",
+      "pillar": "Educational",
+      "platform": "Instagram Feed",
+      "status": "Scheduled",
+      "post_at": "2026-11-29T08:00:00Z",
+      "published_at": null,
+      "blog": "",
+      "caption": "Engagement outfits that still look good in five years: what ages badly, what holds up, and how to coordinate without matching. Our two outfit plan is in the bio.",
+      "tags": "#engagementoutfits #engagementphotos #whattowear #vancouverphotographer #bcweddingphotographer #vancouverbride #simplywedstudio",
+      "files": [
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795285550/simplywed-feed/series_15_outfits.jpg"
+        }
+      ]
+    },
+    {
+      "id": "couple-nicole-tanner-court",
+      "index": 13,
+      "title": "Nicole & Tanner · the basketball-court engagement",
+      "pillar": "Engagement",
+      "platform": "Instagram Feed",
+      "status": "Scheduled",
+      "post_at": "2026-11-30T08:00:00Z",
+      "published_at": null,
+      "blog": "",
+      "caption": "Most engagement shoots start with \"where should we stand?\" This one started with \"who's got next?\"\n\nNicole and Tanner brought a basketball and matching sneakers, and spent the first half hour ignoring us. Then they changed, walked down to the water, and threw leaves at each other.\n\nBring the thing you two already do. It photographs better than standing still ever will.",
+      "tags": "#engagementphotos #vancouverengagement #engagementsession #candidmoments #unposedengagement #basketballcouple #fallengagement #vancouverweddingphotographer #bcweddingphotographer #simplywedstudio",
+      "files": [
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_nt6_1.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_nt6_2.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_nt6_3.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_nt6_4.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_nt6_5.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_nt6_6.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_nt6_7.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_nt6_8.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_nt6_9.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_nt6_10.jpg"
+        }
+      ]
     }
   ]
 }
