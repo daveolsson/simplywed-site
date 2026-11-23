@@ -1,5 +1,5 @@
 {
-  "_comment": "APPEND-ONLY. Make 5976260 runs daily 20:00-20:30 (Make org time) and publishes posts[cursor] only once its post_at has passed; cursor (Data Store 199639) then +1. One post per day: post_at = that day at 00:00 Vancouver (08:00Z). Leave Wednesdays empty for Dave's reels. Single-image posts (1 file) go to CreatePostPhoto, 2+ files to CreateCarouselPhoto.",
+  "_comment": "APPEND-ONLY. Make 5976260 runs daily 20:00-20:30 (Make org time) and publishes posts[cursor] only once its post_at has passed; cursor (Data Store 199639) then +1. One post per day: post_at = that day at 00:00 Vancouver (08:00Z). Leave Wednesdays empty for Dave's reels. Single-image posts (1 file) go to CreatePostPhoto, 2+ files to CreateCarouselPhoto. | 2026-11-23: Dave dropped guide posts; guides 12/09/15 removed (positions 1-7 unchanged, cursor stays valid). No new guide posts.",
   "updated": "2026-11-21",
   "cursor_note": "Data Store 'cursor' = next 1-based index to publish. Pilots occupy 1-3 (published 2026-11-12), so cursor starts at 4.",
   "posts": [
@@ -229,9 +229,9 @@
       "title": "Guide · first look vs aisle reveal",
       "pillar": "Educational",
       "platform": "Instagram Feed",
-      "status": "Scheduled",
+      "status": "Published",
       "post_at": "2026-11-22T08:00:00Z",
-      "published_at": null,
+      "published_at": "2026-11-22",
       "blog": "",
       "caption": "First look or aisle reveal? Both are right for the right couple. What each one buys you, and the middle option nobody mentions, on the journal. Link in bio.",
       "tags": "#firstlook #weddingplanning #weddingtips #vancouverweddingphotographer #yvrwedding #westcoastbride #simplywedstudio",
@@ -294,25 +294,6 @@
       ]
     },
     {
-      "id": "guide-12-hours",
-      "index": 8,
-      "title": "Guide · how many hours of coverage",
-      "pillar": "Educational",
-      "platform": "Instagram Feed",
-      "status": "Scheduled",
-      "post_at": "2026-11-24T08:00:00Z",
-      "published_at": null,
-      "blog": "",
-      "caption": "What do 5, 8 and 10 hours of coverage actually get you? And why does adding hours later cost more? Honest answer, with real prices, in the bio link.",
-      "tags": "#weddingphotography #weddingplanning #weddingtips #vancouverweddingphotographer #engagedvancouver #bcwedding #westcoastbride #simplywedstudio",
-      "files": [
-        {
-          "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795285548/simplywed-feed/series_12_hours.jpg"
-        }
-      ]
-    },
-    {
       "id": "couple-belinda-paris-vandusen",
       "index": 9,
       "title": "Belinda & Paris at VanDusen",
@@ -364,25 +345,6 @@
       ]
     },
     {
-      "id": "guide-09-documentary-vs-posed",
-      "index": 10,
-      "title": "Guide · documentary vs posed",
-      "pillar": "Educational",
-      "platform": "Instagram Feed",
-      "status": "Scheduled",
-      "post_at": "2026-11-27T08:00:00Z",
-      "published_at": null,
-      "blog": "",
-      "caption": "Candid does not mean we never direct you. It means we direct you into moments and then get out of the way. Where posed still wins, and how to tell what a photographer really shoots, on the journal. Link in bio.",
-      "tags": "#candidweddingphotography #documentaryphotography #weddingtips #vancouverweddingphotographer #vancouverwedding #bcwedding #simplywedstudio",
-      "files": [
-        {
-          "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795285550/simplywed-feed/series_09_documentary.jpg"
-        }
-      ]
-    },
-    {
       "id": "review-shania",
       "index": 11,
       "title": "Google review · Shania",
@@ -398,25 +360,6 @@
         {
           "media_type": "IMAGE",
           "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795285551/simplywed-feed/review_shania.jpg"
-        }
-      ]
-    },
-    {
-      "id": "guide-15-outfits",
-      "index": 12,
-      "title": "Guide · engagement outfits that age well",
-      "pillar": "Educational",
-      "platform": "Instagram Feed",
-      "status": "Scheduled",
-      "post_at": "2026-11-29T08:00:00Z",
-      "published_at": null,
-      "blog": "",
-      "caption": "Engagement outfits that still look good in five years: what ages badly, what holds up, and how to coordinate without matching. Our two outfit plan is in the bio.",
-      "tags": "#engagementoutfits #engagementphotos #whattowear #vancouverphotographer #bcweddingphotographer #vancouverbride #simplywedstudio",
-      "files": [
-        {
-          "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795285550/simplywed-feed/series_15_outfits.jpg"
         }
       ]
     },
