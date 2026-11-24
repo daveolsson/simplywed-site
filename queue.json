@@ -1,5 +1,5 @@
 {
-  "_comment": "APPEND-ONLY. Make 5976260 runs daily 20:00-20:30 (Make org time) and publishes posts[cursor] only once its post_at has passed; cursor (Data Store 199639) then +1. One post per day: post_at = that day at 00:00 Vancouver (08:00Z). Leave Wednesdays empty for Dave's reels. Single-image posts (1 file) go to CreatePostPhoto, 2+ files to CreateCarouselPhoto. | 2026-11-23: Dave dropped guide posts; guides 12/09/15 removed (positions 1-7 unchanged, cursor stays valid). No new guide posts. | 2026-11-23: inserted couple-fiona-shomari-day at position 8 (after heli, 1-7 unchanged) — first post in the @j7even_photography whole-day style Dave sent as the example. | 2026-11-23: added Teresa & Victor (27 Nov) and Bessie & Raymond (29 Nov) whole-day carousels.",
+  "_comment": "APPEND-ONLY. Make 5976260 runs daily 20:00-20:30 (Make org time) and publishes posts[cursor] only once its post_at has passed; cursor (Data Store 199639) then +1. One post per day: post_at = that day at 00:00 Vancouver (08:00Z). Leave Wednesdays empty for Dave's reels. Single-image posts (1 file) go to CreatePostPhoto, 2+ files to CreateCarouselPhoto. | 2026-11-23: Dave dropped guide posts; guides 12/09/15 removed (positions 1-7 unchanged, cursor stays valid). No new guide posts. | 2026-11-23: inserted couple-fiona-shomari-day at position 8 (after heli, 1-7 unchanged) — first post in the @j7even_photography whole-day style Dave sent as the example. | 2026-11-23: added Teresa & Victor (27 Nov) and Bessie & Raymond (29 Nov) whole-day carousels. | 2026-11-24: Belinda & Paris + Nicole & Tanner rebuilt in the whole-day style (nov_bp3 / nov_nt3), same positions.",
   "updated": "2026-11-21",
   "cursor_note": "Data Store 'cursor' = next 1-based index to publish. Pilots occupy 1-3 (published 2026-11-12), so cursor starts at 4.",
   "posts": [
@@ -351,51 +351,55 @@
     {
       "id": "couple-belinda-paris-vandusen",
       "index": 9,
-      "title": "Belinda & Paris at VanDusen",
+      "title": "Belinda & Paris · the whole day at VanDusen",
       "pillar": "Wedding",
       "platform": "Instagram Feed",
       "status": "Scheduled",
       "post_at": "2026-11-26T08:00:00Z",
       "published_at": null,
       "blog": "",
-      "caption": "Two people sat on a bench while their whole wedding party walked past in a blur.\n\nBelinda and Paris got married at VanDusen in September. Stone arches, tall grasses, a veil that caught the wind once and was photographed doing it. Then a doughnut tower instead of a cake, and a toast that got loud.\n\nThe still frames are lovely. The blurry one is the one they will keep.\n\n📍 VanDusen Botanical Garden",
+      "caption": "Celebrating\n\nBelinda & Paris\n\nA first look under the vines, a bench while the wedding party blurred past, and a doughnut tower instead of a cake. The whole day, start to finish.\n\nPhoto + content @simplywedstudio\n\n📍 VanDusen Botanical Garden",
       "tags": "#vandusengarden #vandusenwedding #gardenwedding #vancouverwedding #vancouverweddingphotographer #documentaryweddingphotography #candidweddingphotography #realwedding #bcweddingphotographer #simplywedstudio",
       "files": [
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_bp_1.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795500303/simplywed-feed/nov_bp3_1.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_bp_2.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795500305/simplywed-feed/nov_bp3_2.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_bp_3.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795500306/simplywed-feed/nov_bp3_3.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_bp_4.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795500307/simplywed-feed/nov_bp3_4.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_bp_5.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795500308/simplywed-feed/nov_bp3_5.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_bp_6.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795500309/simplywed-feed/nov_bp3_6.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_bp_7.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795500310/simplywed-feed/nov_bp3_7.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_bp_8.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795500311/simplywed-feed/nov_bp3_8.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_bp_9.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795500311/simplywed-feed/nov_bp3_9.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795500312/simplywed-feed/nov_bp3_10.jpg"
         }
       ]
     },
@@ -531,55 +535,55 @@
     {
       "id": "couple-nicole-tanner-court",
       "index": 13,
-      "title": "Nicole & Tanner · the basketball-court engagement",
+      "title": "Nicole & Tanner · the engagement, start to finish",
       "pillar": "Engagement",
       "platform": "Instagram Feed",
       "status": "Scheduled",
       "post_at": "2026-11-30T08:00:00Z",
       "published_at": null,
       "blog": "",
-      "caption": "Most engagement shoots start with \"where should we stand?\" This one started with \"who's got next?\"\n\nNicole and Tanner brought a basketball and matching sneakers, and spent the first half hour ignoring us. Then they changed, walked down to the water, and threw leaves at each other.\n\nBring the thing you two already do. It photographs better than standing still ever will.",
+      "caption": "Celebrating\n\nNicole & Tanner\n\nRed chairs on the pier, leaves in the air, and a basketball court to finish. Bring the thing you two already do.\n\nPhoto + content @simplywedstudio",
       "tags": "#engagementphotos #vancouverengagement #engagementsession #candidmoments #unposedengagement #basketballcouple #fallengagement #vancouverweddingphotographer #bcweddingphotographer #simplywedstudio",
       "files": [
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_nt6_1.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795500313/simplywed-feed/nov_nt3_1.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_nt6_2.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795500315/simplywed-feed/nov_nt3_2.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_nt6_3.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795500316/simplywed-feed/nov_nt3_3.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_nt6_4.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795500317/simplywed-feed/nov_nt3_4.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_nt6_5.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795500318/simplywed-feed/nov_nt3_5.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_nt6_6.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795500320/simplywed-feed/nov_nt3_6.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_nt6_7.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795500321/simplywed-feed/nov_nt3_7.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_nt6_8.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795500323/simplywed-feed/nov_nt3_8.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_nt6_9.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795500324/simplywed-feed/nov_nt3_9.jpg"
         },
         {
           "media_type": "IMAGE",
-          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/simplywed-feed/nov_nt6_10.jpg"
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795500325/simplywed-feed/nov_nt3_10.jpg"
         }
       ]
     }
