@@ -17,6 +17,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;1,9..144,300&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- Google Calendar Appointment Scheduling -->
+<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
 <style>
   :root{--ink:#33343A;--ink-deep:#1E2024;--ink-line:#33373C;--soft:#6C6E75;--muted:#B9BDC2;
     --cyan:#0CC0DF;--cyan-deep:#0A9DB6;--cyan-on:#10262B;--cloud:#F4F5F6;--line:#E3E5E7;--line-strong:#C9CDD1;--placeholder:#A7ACB1;--error:#C2453D;}
@@ -56,6 +59,10 @@
   .blk .v{font-size:18px;color:#fff;margin-top:6px;} .blk .v a{color:#fff;border-bottom:1px solid #4A4F55;} .blk .v a:hover{color:var(--cyan);border-color:var(--cyan);}
   .blocks{display:flex;flex-direction:column;gap:24px;}
   .note{border-top:1px solid var(--ink-line);padding-top:20px;font-size:15px;color:var(--muted);max-width:420px;} .note b{color:#fff;font-weight:500;}
+  .book{border-top:1px solid var(--ink-line);padding-top:24px;}
+  .book .e{font:500 11px 'Jost';letter-spacing:.24em;text-transform:uppercase;color:var(--cyan);}
+  .book p{font-size:15px;color:var(--muted);max-width:420px;margin:8px 0 16px;}
+  .book button,.book button *{font-family:'Jost',sans-serif !important;letter-spacing:.04em;}
   .inq .right{background:var(--cloud);padding:clamp(48px,6vw,88px) clamp(24px,4vw,56px);}
   .inq .right h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(26px,3vw,32px);}
   .inq .right .sub{font-size:15px;color:var(--soft);margin:10px 0 32px;max-width:460px;}
@@ -173,6 +180,28 @@
       <div class="blk"><div class="e">Instagram</div><div class="v"><a href="https://www.instagram.com/simplywedstudio">@simplywedstudio</a>
       <a href="https://g.page/r/CfG8nxle7F3TEBM" target="_blank" rel="noopener">Google reviews &#9733; 5.0</a></div></div>
       <div class="blk"><div class="e">Based in</div><div class="v">Metro Vancouver, BC — travelling anywhere</div></div>
+    </div>
+    <div class="book">
+      <div class="e">Prefer to talk first?</div>
+      <p>Book a quick call — no pressure, just a chat about your day and whether we're a fit.</p>
+      <script>
+      (function(){
+        var target=document.currentScript;
+        window.addEventListener('load',function(){
+          var tries=0;
+          (function go(){
+            if(window.calendar&&calendar.schedulingButton){
+              calendar.schedulingButton.load({
+                url:'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2jUsrLlpX8qvMTWByJJcziCkcUkmwcgapTsSMF4pif8HRmxKTioVKBhy35QfidSOJahmlpjH7B?gv=true',
+                color:'#077D91',
+                label:'Book a call',
+                target:target,
+              });
+            } else if(tries++<25){ setTimeout(go,150); }
+          })();
+        });
+      })();
+      </script>
     </div>
     <p class="note">Typical reply time: <b>within 24 hours.</b> If you don't hear back, check your spam folder or email me directly.</p>
   </div></div>
