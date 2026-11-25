@@ -1,6 +1,6 @@
 {
   "_comment": "APPEND-ONLY. Make 5976260 runs daily 20:00-20:30 (Make org time) and publishes posts[cursor] only once its post_at has passed; cursor (Data Store 199639) then +1. One post per day: post_at = that day at 00:00 Vancouver (08:00Z). Leave Wednesdays empty for Dave's reels. Single-image posts (1 file) go to CreatePostPhoto, 2+ files to CreateCarouselPhoto. | 2026-11-23: Dave dropped guide posts; guides 12/09/15 removed (positions 1-7 unchanged, cursor stays valid). No new guide posts. | 2026-11-23: inserted couple-fiona-shomari-day at position 8 (after heli, 1-7 unchanged) — first post in the @j7even_photography whole-day style Dave sent as the example. | 2026-11-23: added Teresa & Victor (27 Nov) and Bessie & Raymond (29 Nov) whole-day carousels. | 2026-11-24: Belinda & Paris + Nicole & Tanner rebuilt in the whole-day style (nov_bp3 / nov_nt3), same positions.",
-  "updated": "2026-11-21",
+  "updated": "2026-11-24",
   "cursor_note": "Data Store 'cursor' = next 1-based index to publish. Pilots occupy 1-3 (published 2026-11-12), so cursor starts at 4.",
   "posts": [
     {
@@ -584,6 +584,465 @@
         {
           "media_type": "IMAGE",
           "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795500325/simplywed-feed/nov_nt3_10.jpg"
+        }
+      ]
+    },
+    {
+      "id": "couple-christine-hugh-day",
+      "index": 14,
+      "title": "Christine & Hugh · the whole day",
+      "pillar": "Wedding",
+      "platform": "Instagram Feed",
+      "status": "Scheduled",
+      "post_at": "2026-12-03T08:00:00Z",
+      "published_at": null,
+      "blog": "",
+      "caption": "Celebrating\n\nChristine & Hugh\n\nA tea ceremony at home, door games for the groomsmen, a first look in the trees, and vows by the water. The whole day, start to finish.\n\nPhoto + content @simplywedstudio",
+      "tags": "#weddingphotography #realwedding #documentarywedding #candidweddingphotography #weddingstorytelling #vancouverwedding #vancouverweddingphotographer #bcweddingphotographer #simplywedstudio",
+      "files": [
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578594/simplywed-feed/dec_ch_1.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578595/simplywed-feed/dec_ch_2.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578596/simplywed-feed/dec_ch_3.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578597/simplywed-feed/dec_ch_4.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578598/simplywed-feed/dec_ch_5.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578599/simplywed-feed/dec_ch_6.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578600/simplywed-feed/dec_ch_7.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578601/simplywed-feed/dec_ch_8.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578602/simplywed-feed/dec_ch_9.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578602/simplywed-feed/dec_ch_10.jpg"
+        }
+      ]
+    },
+    {
+      "id": "couple-nimi-jeff-engagement",
+      "index": 15,
+      "title": "Nimi & Jeff · the engagement",
+      "pillar": "Engagement",
+      "platform": "Instagram Feed",
+      "status": "Scheduled",
+      "post_at": "2026-12-04T08:00:00Z",
+      "published_at": null,
+      "blog": "",
+      "caption": "Celebrating\n\nNimi & Jeff\n\nCedars, rocks and a bottle of champagne at golden hour.\n\nPhoto + content @simplywedstudio",
+      "tags": "#engagementphotos #vancouverengagement #engagementsession #candidmoments #unposedengagement #vancouverweddingphotographer #bcweddingphotographer #simplywedstudio",
+      "files": [
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578604/simplywed-feed/dec_nj_1.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578604/simplywed-feed/dec_nj_2.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578605/simplywed-feed/dec_nj_3.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578607/simplywed-feed/dec_nj_4.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578607/simplywed-feed/dec_nj_5.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578608/simplywed-feed/dec_nj_6.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578609/simplywed-feed/dec_nj_7.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578611/simplywed-feed/dec_nj_8.jpg"
+        }
+      ]
+    },
+    {
+      "id": "couple-honoria-kevin-elopement",
+      "index": 16,
+      "title": "Honoria & Kevin · a snow elopement",
+      "pillar": "Wedding",
+      "platform": "Instagram Feed",
+      "status": "Scheduled",
+      "post_at": "2026-12-06T08:00:00Z",
+      "published_at": null,
+      "blog": "",
+      "caption": "Celebrating\n\nHonoria & Kevin\n\nVows in the snow, a short walk into the trees, and everyone in their warmest coats.\n\nPhoto + content @simplywedstudio",
+      "tags": "#elopement #snowelopement #winterwedding #intimatewedding #candidweddingphotography #vancouverwedding #vancouverweddingphotographer #bcweddingphotographer #simplywedstudio",
+      "files": [
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578612/simplywed-feed/dec_hk_1.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578613/simplywed-feed/dec_hk_2.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578614/simplywed-feed/dec_hk_3.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578615/simplywed-feed/dec_hk_4.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578616/simplywed-feed/dec_hk_5.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578617/simplywed-feed/dec_hk_6.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578618/simplywed-feed/dec_hk_7.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578619/simplywed-feed/dec_hk_8.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578620/simplywed-feed/dec_hk_9.jpg"
+        }
+      ]
+    },
+    {
+      "id": "couple-lucinda-jonathan-engagement",
+      "index": 17,
+      "title": "Lucinda & Jonathan · the engagement",
+      "pillar": "Engagement",
+      "platform": "Instagram Feed",
+      "status": "Scheduled",
+      "post_at": "2026-12-07T08:00:00Z",
+      "published_at": null,
+      "blog": "",
+      "caption": "Celebrating\n\nLucinda & Jonathan\n\nRed maples in town, then the docks at sunset until the light ran out.\n\nPhoto + content @simplywedstudio",
+      "tags": "#engagementphotos #vancouverengagement #engagementsession #candidmoments #unposedengagement #fallengagement #vancouverweddingphotographer #bcweddingphotographer #simplywedstudio",
+      "files": [
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578621/simplywed-feed/dec_lj_1.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578622/simplywed-feed/dec_lj_2.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578624/simplywed-feed/dec_lj_3.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578625/simplywed-feed/dec_lj_4.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578626/simplywed-feed/dec_lj_5.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578627/simplywed-feed/dec_lj_6.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578627/simplywed-feed/dec_lj_7.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578628/simplywed-feed/dec_lj_8.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578629/simplywed-feed/dec_lj_9.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578630/simplywed-feed/dec_lj_10.jpg"
+        }
+      ]
+    },
+    {
+      "id": "couple-angela-terry-engagement",
+      "index": 18,
+      "title": "Angela & Terry · winter engagement",
+      "pillar": "Engagement",
+      "platform": "Instagram Feed",
+      "status": "Scheduled",
+      "post_at": "2026-12-10T08:00:00Z",
+      "published_at": null,
+      "blog": "",
+      "caption": "Celebrating\n\nAngela & Terry\n\nSnow on the ground, mountains in the water, and a blanket for when the sun dropped.\n\nPhoto + content @simplywedstudio",
+      "tags": "#engagementphotos #vancouverengagement #engagementsession #candidmoments #unposedengagement #winterengagement #vancouverweddingphotographer #bcweddingphotographer #simplywedstudio",
+      "files": [
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578631/simplywed-feed/dec_at_1.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578632/simplywed-feed/dec_at_2.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578633/simplywed-feed/dec_at_3.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578634/simplywed-feed/dec_at_4.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578635/simplywed-feed/dec_at_5.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578636/simplywed-feed/dec_at_6.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578637/simplywed-feed/dec_at_7.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578638/simplywed-feed/dec_at_8.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578639/simplywed-feed/dec_at_9.jpg"
+        }
+      ]
+    },
+    {
+      "id": "couple-anny-peter-prewedding",
+      "index": 19,
+      "title": "Anny & Peter · prewedding, day and night",
+      "pillar": "Engagement",
+      "platform": "Instagram Feed",
+      "status": "Scheduled",
+      "post_at": "2026-12-14T08:00:00Z",
+      "published_at": null,
+      "blog": "",
+      "caption": "Celebrating\n\nAnny & Peter\n\nA white gown on the seawall by day, a lilac one under the streetlights by night.\n\nPhoto + content @simplywedstudio",
+      "tags": "#preweddingshoot #prewedding #vancouverprewedding #engagementsession #candidmoments #vancouverweddingphotographer #bcweddingphotographer #simplywedstudio",
+      "files": [
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578640/simplywed-feed/dec_ap_1.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578640/simplywed-feed/dec_ap_2.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578641/simplywed-feed/dec_ap_3.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578643/simplywed-feed/dec_ap_4.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578644/simplywed-feed/dec_ap_5.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578645/simplywed-feed/dec_ap_6.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578645/simplywed-feed/dec_ap_7.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578646/simplywed-feed/dec_ap_8.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578647/simplywed-feed/dec_ap_9.jpg"
+        }
+      ]
+    },
+    {
+      "id": "couple-aneeta-christian-engagement",
+      "index": 20,
+      "title": "Aneeta & Christian · the engagement",
+      "pillar": "Engagement",
+      "platform": "Instagram Feed",
+      "status": "Scheduled",
+      "post_at": "2026-12-17T08:00:00Z",
+      "published_at": null,
+      "blog": "",
+      "caption": "Celebrating\n\nAneeta & Christian\n\nRocks, an umbrella that came out for the drizzle, and the beach until the light went blue.\n\nPhoto + content @simplywedstudio",
+      "tags": "#engagementphotos #vancouverengagement #engagementsession #candidmoments #unposedengagement #vancouverweddingphotographer #bcweddingphotographer #simplywedstudio",
+      "files": [
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578648/simplywed-feed/dec_ac_1.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578649/simplywed-feed/dec_ac_2.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578650/simplywed-feed/dec_ac_3.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578651/simplywed-feed/dec_ac_4.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578652/simplywed-feed/dec_ac_5.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578653/simplywed-feed/dec_ac_6.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578654/simplywed-feed/dec_ac_7.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578656/simplywed-feed/dec_ac_8.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578657/simplywed-feed/dec_ac_9.jpg"
+        }
+      ]
+    },
+    {
+      "id": "couple-heli-proposal-part-two",
+      "index": 21,
+      "title": "Heli proposal · part two",
+      "pillar": "Proposal",
+      "platform": "Instagram Feed",
+      "status": "Scheduled",
+      "post_at": "2026-12-24T08:00:00Z",
+      "published_at": null,
+      "blog": "",
+      "caption": "Same morning, the other camera roll.\n\nThe flight up, the walk back, and everything the guitarist saw in between. A summit above Whistler, one knee in the snow, and a champagne glass that didn't stay full for long.\n\nPhoto + content @simplywedstudio",
+      "tags": "#heliproposal #whistler #mountainproposal #surpriseproposal #proposalphotographer #vancouverproposal #engaged #bcweddingphotographer #vancouverweddingphotographer #simplywedstudio",
+      "files": [
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578657/simplywed-feed/dec_heli3_1.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578658/simplywed-feed/dec_heli3_2.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578659/simplywed-feed/dec_heli3_3.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578660/simplywed-feed/dec_heli3_4.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578661/simplywed-feed/dec_heli3_5.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578662/simplywed-feed/dec_heli3_6.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578663/simplywed-feed/dec_heli3_7.jpg"
+        }
+      ]
+    },
+    {
+      "id": "couple-fiona-shomari-engagement",
+      "index": 22,
+      "title": "Fiona & Shomari · the engagement",
+      "pillar": "Engagement",
+      "platform": "Instagram Feed",
+      "status": "Scheduled",
+      "post_at": "2026-12-26T08:00:00Z",
+      "published_at": null,
+      "blog": "",
+      "caption": "Celebrating\n\nFiona & Shomari\n\nBefore the wedding: the harbour at noon, the park in the afternoon, the beach at sunset.\n\nPhoto + content @simplywedstudio",
+      "tags": "#engagementphotos #vancouverengagement #engagementsession #candidmoments #unposedengagement #vancouverweddingphotographer #bcweddingphotographer #simplywedstudio",
+      "files": [
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578663/simplywed-feed/dec_fse_1.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578664/simplywed-feed/dec_fse_2.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578665/simplywed-feed/dec_fse_3.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578666/simplywed-feed/dec_fse_4.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578667/simplywed-feed/dec_fse_5.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578668/simplywed-feed/dec_fse_6.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578669/simplywed-feed/dec_fse_7.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578670/simplywed-feed/dec_fse_8.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578671/simplywed-feed/dec_fse_9.jpg"
+        },
+        {
+          "media_type": "IMAGE",
+          "image_url": "https://res.cloudinary.com/d7tyauvr/image/upload/v1795578672/simplywed-feed/dec_fse_10.jpg"
         }
       ]
     }
